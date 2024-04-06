@@ -1,0 +1,32 @@
+.third-floor-container h1 {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .question-box {
+    border-width: 4px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .question-label {
+    margin: 20px;
+    color: orange;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .input-field {
+    padding: 5px;
+    margin: 20px;
+    border-width: 1px;
+    border-color: grey;
+    display: block;
+  }
+  
