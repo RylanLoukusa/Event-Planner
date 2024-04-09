@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 //import ReactDOM from 'react-dom/client';
 
 //<mealDeal prop={true} />
@@ -42,6 +44,7 @@ function WhichAddOns(props) {
 //root.render(<Greeting isLoggedIn={false} />);
 
 const Summary = () => {
+  let navigate = useNavigate();
   return (
     <div>
       <h1>Booking summary</h1>

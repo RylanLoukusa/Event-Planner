@@ -1,10 +1,13 @@
 import TextField from "../Components/TextField.jsx";
+import { useNavigate } from 'react-router-dom';
 import { React } from "react";
 import "../Styles/Information.css"
 
 const Information = () => {
+    let navigate = useNavigate();
+
     return (
-        <div className="setup">
+        <div className="Setup">
             <h1 className="title-text">YOUR INFORMATION</h1><br />
 
             <TextField action="Enter" label="First Name" />
@@ -17,11 +20,11 @@ const Information = () => {
             <TextField action="Enter" label="State" />
             <TextField action="Enter" label="ZIP" />
 
-            <button className="buttons">Next: Select Package</button>
+            <button className="buttons" onClick={() => navigate('/Date')}>Next: Select Package</button>
 
             <p>Booking TIME on DATE</p>
 
-            <button className="buttons">Change or Cancel</button>
+            <button className="buttons" onClick={()=> navigate('/Home')}>Change or Cancel</button>
         </div>
     );
 }

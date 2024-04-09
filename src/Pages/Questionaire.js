@@ -1,11 +1,13 @@
 import QuestionnaireTextField from "../Components/QuestionnaireTextField.jsx";
 import SeatingSelect from "../Components/SeatingSelect.jsx";
+import { useNavigate } from 'react-router-dom';
+
 import DrinkSelect from "../Components/DrinkSelect.jsx";
 import { React } from "react";
 import "../Styles/Questionaire.css"
 
 const Questionaire = () => {
-
+    let navigate = useNavigate();
     return (
         <div className="setup">
             <h1 className="title-text">Questionnaire</h1><br />

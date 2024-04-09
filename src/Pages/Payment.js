@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import "../Styles/Payment.css"
 
 const Payment = () => {
+  let navigate = useNavigate();
   // Tip adding buttons
   const onNoTipPress = () => {
     alert("You chose not to tip.");

@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import '../Styles/ThirdFloorQuestions.css'; // Make sure the path is correct
 
 const ThirdFloorQuestions = () =>  {
+  let navigate = useNavigate();
   return (
     <div className="third-floor-container">
       <h1>Third Floor Rental</h1>

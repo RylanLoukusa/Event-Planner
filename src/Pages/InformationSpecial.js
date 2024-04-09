@@ -1,8 +1,11 @@
 import TextField from "../Components/TextField.jsx"
+import { useNavigate } from 'react-router-dom';
+
 import { React } from "react";
 import "../Styles/Information.css"
 
 const InformationSpecial = () => {
+    let navigate = useNavigate();
     return (
         <div className="setup">
             <h1 className="title-text">YOUR INFORMATION</h1><br />

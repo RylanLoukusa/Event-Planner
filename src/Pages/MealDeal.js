@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const MealDealSelectionPage = () => {
+  let navigate = useNavigate();
   const [selectedMealDeal, setSelectedMealDeal] = useState('');
   const [selectedDrinks, setSelectedDrinks] = useState([]);
   const [addOnsExpanded, setAddOnsExpanded] = useState(false);
