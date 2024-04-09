@@ -36,7 +36,7 @@ const Home = () =>  {
             Book this Room
           </button>
         </div>
-        <button className="buttons" onClick={() => navigate('/SpecialBooking')}>
+        <button className="buttons" onClick={() => navigate('/InformationSpecial')}>
           Request a special booking?
         </button>
         <button className="buttons" onClick={() => navigate('/AdminVerifyScreen')}>

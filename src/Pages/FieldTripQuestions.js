@@ -1,8 +1,11 @@
 // Import React and CSS styles
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import '../Styles/FieldTripQuestions.css'; 
 
 const FieldTripQuestions = () => {
+  let navigate = useNavigate();
   return (
     <div className="field-trip-container">
       <h1>Field Trip Questions</h1>

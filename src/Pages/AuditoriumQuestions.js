@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import '../Styles/AuditoriumQuestions.css'; // Make sure the path to your CSS file is correct
 
 const AuditoriumQuestions = () => {
-
+  let navigate = useNavigate();
   return (
     <div>
       <div className="auditorium-container">
