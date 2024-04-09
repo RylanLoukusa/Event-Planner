@@ -23,7 +23,7 @@ const AdminVerify = () => {
         <label className="input-prompt">Passcode</label>
         <input className="input" placeholder="Passcode" type="password" required />
 
-        <button className="buttons" onClick={() => navigate('/AdminViewScreen')}>
+        <button className="buttons" onClick={() => navigate('/AdminView')}>
           <div className="button-text">Submit</div>
         </button>
       </div>
