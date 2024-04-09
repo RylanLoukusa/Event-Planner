@@ -2,6 +2,7 @@
 .Setup {
     background-color: 'white';
     align-items: 'center';
+    justify-content: 'center';
 }
 
 .Buttons {
@@ -18,6 +19,7 @@
     padding: 5;
     padding-bottom: 10;
     margin: 10;
+    align-items: 'center';
 }
 
 .HeaderText {
