@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {AdminVerify} from '/AdminVerify';
 import "../Styles/Home.css";
 // image logo
 const logo = 'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w';
@@ -33,14 +32,14 @@ const Home = () =>  {
             <br /> 2nd Floor Dining Room
             <br /> Capacity: 25
           </p>
-          <button className="buttons" onClick={() => navigate('./Pages/Information')}>
+          <button className="buttons" onClick={() => navigate('/Information')}>
             Book this Room
           </button>
         </div>
-        <button className="buttons" onClick={() => navigate('./Pages/InformationSpecial')}>
+        <button className="buttons" onClick={() => navigate('/InformationSpecial')}>
           Request a special booking?
         </button>
-        <button className="buttons" onClick={() => navigate('./Pages/AdminVerify')}>
+        <button className="buttons" onClick={() => navigate('/AdminVerify')}>
           Admin: manage bookings
         </button>
       </div>

@@ -24,19 +24,19 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/admin-verify" element={<AdminVerify />} />
-                <Route path="/admin-view" element={<AdminView />} />
-                <Route path="/payment" element={<Payment />} />
-                <Route path="/auditorium-questions" element={<AuditoriumQuestions />} />
-                <Route path="/third-floor-questions" element={<ThirdFloorQuestions />} />
-                <Route path="/field-trip-questions" element={<FieldTripQuestions />} />
-                <Route path="/summary" element={<Summary />} />
-                <Route path="/questionaire" element={<Questionaire />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/date" element={<Date />} />
-                <Route path="/meal-deal" element={<MealDeal />} />
-                <Route path="/information" element={<Information />} />
-                <Route path="/information-special" element={<InformationSpecial />} />
+                <Route path="/AdminVerify" element={<AdminVerify />} />
+                <Route path="/AdminView" element={<AdminView />} />
+                <Route path="/Payment" element={<Payment />} />
+                <Route path="/AuditoriumQuestions" element={<AuditoriumQuestions />} />
+                <Route path="/ThirdFloorQuestions" element={<ThirdFloorQuestions />} />
+                <Route path="/FieldTripQuestions" element={<FieldTripQuestions />} />
+                <Route path="/Summary" element={<Summary />} />
+                <Route path="/Questionaire" element={<Questionaire />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/Date" element={<Date />} />
+                <Route path="/MealDeal" element={<MealDeal />} />
+                <Route path="/Information" element={<Information />} />
+                <Route path="/InformationSpecial" element={<InformationSpecial />} />
             </Routes>
         </Router>
     );

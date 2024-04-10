@@ -27,11 +27,10 @@ const AuditoriumQuestions = () => {
           <input className="input-field" placeholder="input:" />
 
           <div className="question">What else would you like us to know about your event?</div>
-          <input className="input-field" placeholder="input:" />
+          <input required className="input-field" placeholder="input:" />
 
-          <div className="question">Please acknowledge that you will need to bring in your media 7-10 days before your event in order to format your movie properly.</div>
           <label>
-            <input type="checkbox" /> Checkbox here
+            <input required type="checkbox" /> I acknowledge that I will need to bring in my media 7-10 days before my event in order to format my movie properly 
           </label>
         </div>
       </div>
