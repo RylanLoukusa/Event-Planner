@@ -1,37 +1,41 @@
 import React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
+import { useNavigate } from 'react-router-dom';
+
 import '../Styles/AdminView.css';
 
-const HostDialog = () => (
+const DialogDemo = () => (
   <Dialog.Root>
-    <Dialog.Trigger>
-      <button className='buttons'>Add a host </button>
+    <Dialog.Trigger asChild>
+      <button className="buttons">Add a Host</button>
     </Dialog.Trigger>
     <Dialog.Portal>
-      <Dialog.Overlay classname='DialogOverlay' />
-      <Dialog.Content className='DialogContent'>
-        <Dialog.Title className='Dialog Title'>Add a host</Dialog.Title>
-        <Dialog.Description className='DialogDescription'>Add a host to any party here. Click save when done</Dialog.Description>
-        <fieldset className='Fieldset'>
-          <label className='InputPrompt'> Party Name </label>
-          <input className='Input' id='Party' defaultValue='Enter party' />
+      <Dialog.Overlay/>
+      <Dialog.Content>
+        <Dialog.Title className="DialogTitle">Edit profile</Dialog.Title>
+        <Dialog.Description className="header">
+          Make changes to your profile here. Click save when you're done.
+        </Dialog.Description>
+        <fieldset >
+          <label className="InputPrompt" htmlFor="name">
+            Name
+          </label>
+          <input className="Input" id="name" defaultValue="Pedro Duarte" />
         </fieldset>
-        <fieldset className='Fieldset'>
-          <label className='InputPrompt'>Host First Name</label>
-          <input className='Input' id='HostFirst' defaultValue='First Name' />
-        </fieldset>
-        <fieldset>
-          <label className='InputPrompt'>Host Last Name</label>
-          <input className='Input' id='HostLast' defaultValue='Last Name' />
+        <fieldset >
+          <label className="InputPrompt" htmlFor="username">
+            Username
+          </label>
+          <input className="Input" id="username" defaultValue="@peduarte" />
         </fieldset>
         <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
           <Dialog.Close asChild>
-            <button className='buttons'>Save changes</button>
+            <button className="buttons">Save changes</button>
           </Dialog.Close>
         </div>
         <Dialog.Close asChild>
-          <button className='IconButton' aria-label='Close'>
+          <button className="buttons" aria-label="Close">
             <Cross2Icon />
           </button>
         </Dialog.Close>
@@ -41,11 +45,13 @@ const HostDialog = () => (
 );
 
 const AdminView = () => {
+  let navigate = useNavigate();
+
   return (
     <div>
       <div className='setup'>
         <div>
-          <HostDialog />
+          <DialogDemo/>
           <p> Date </p>
           <p> Party name and type </p>
         </div>
