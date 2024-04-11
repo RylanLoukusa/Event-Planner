@@ -9,12 +9,12 @@ const Home = () =>  {
 
   return (
     <div className="setup">
-      <img src={logo} alt="Logo" style={{ width: '400px', height: '225px' }} />
-      <div style={{ overflowY: 'scroll' }}>
+      <img src={logo} alt="Logo" style={{ width: '450px', height: '250px' }} />
+      <div style={{ overflow: 'scroll' }}>
         <h1 className="title-text">Book your Party</h1> {/* Use <h1> instead of <title> for in-document titles */}
         <div className="selection-view">
           <h2 className="header-text">Party Room</h2>
-          <p>
+          <p className="description-text">
             5 minutes - packages start at $210
             <br /> St. Michael Cinema
             <br /> 1st Floor Party Room
@@ -26,7 +26,7 @@ const Home = () =>  {
         </div>
         <div className="selection-view">
           <h2 className="header-text">Dining Room</h2>
-          <p>
+          <p className="description-text">
             5 minutes - packages start at $210
             <br /> St. Michael Cinema
             <br /> 2nd Floor Dining Room
@@ -36,10 +36,10 @@ const Home = () =>  {
             Book this Room
           </button>
         </div>
-        <button className="buttons" onClick={() => navigate('/InformationSpecial')}>
+        <button className="special-button" onClick={() => navigate('/InformationSpecial')}>
           Request a special booking?
         </button>
-        <button className="buttons" onClick={() => navigate('/AdminVerify')}>
+        <button className="special-button" onClick={() => navigate('/AdminVerify')}>
           Admin: manage bookings
         </button>
       </div>

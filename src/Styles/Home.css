@@ -21,6 +21,7 @@
   .special-button {
     text-align: center;
     font-size: 15px;
+    padding:40px;
   }
   
   .selection-view {
@@ -33,11 +34,16 @@
   .header-text {
     font-weight: bold;
     font-size: 25px;
+    margin:20px;
+  }
+  .description-text{
+    font-size: 15;
+    margin:10px;
   }
   
   .title-text {
     font-size: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     color: grey;
     text-align: center;
   }

@@ -14,8 +14,7 @@
     text-align: 'center';
 }
 
-.SelectionView {
-    border-width: 4;
+.selectionView {
     padding: 5;
     padding-bottom: 10;
     margin: 10;
@@ -35,9 +34,9 @@
 }
 
 .Input {
-    padding: 5;
-    margin: 20;
-    border-width: 1;
+    margin:'10px';
+    
+    
 }
 
 .Header {
