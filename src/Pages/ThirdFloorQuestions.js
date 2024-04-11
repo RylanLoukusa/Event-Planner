@@ -1,29 +1,45 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import * as Dialog from '@radix-ui/react-dialog';
+import { Cross2Icon } from '@radix-ui/react-icons';
+import '../Styles/Dialog.css';
 
-import '../Styles/ThirdFloorQuestions.css'; // Make sure the path is correct
-
-const ThirdFloorQuestions = () =>  {
-  let navigate = useNavigate();
-  return (
-    <div className="third-floor-container">
-      <h1>Third Floor Rental</h1>
-      <div className="question-box">
-        <label className="question-label">What is the name of your Business / Organization</label>
-        <input className="input-field" placeholder="input:" />
-
-        <label className="question-label">Expected Attendance</label>
-        <input className="input-field" placeholder="input:" />
-
-        <label className="question-label">Do you have any requests regarding our catering menu?</label>
-        <input className="input-field" placeholder="input:" />
-
-        {/* This label is repeated, you might want to adjust if it was not intended */}
-        <label className="question-label">Do you have any requests regarding our catering menu?</label>
-        <input className="input-field" placeholder="input:" />
-      </div>
-    </div>
-  );
-}
+const ThirdFloorQuestions = () => (
+  <Dialog.Root>
+    <Dialog.Trigger asChild>
+      <button className="Button orange">Book Now</button>
+    </Dialog.Trigger>
+    <Dialog.Portal>
+      <Dialog.Overlay className="DialogOverlay" />
+      <Dialog.Content className="DialogContent">
+        <Dialog.Title className="DialogTitle">Questionnaire</Dialog.Title>
+        <Dialog.Description className="DialogDescription">
+          Third Floor Event Booking
+        </Dialog.Description>
+        <fieldset className="Fieldset">
+          <label className="Label" htmlFor="party">
+          Business/organization name?
+          </label>
+          <input className="Input" id="party" defaultValue="enter" />
+        </fieldset>
+        <fieldset className="Fieldset">
+          <label className="Label" htmlFor="attendance">
+            Expected Attendance
+          </label>
+          <input className="Input" id="attendance" defaultValue="enter" />
+        </fieldset>
+        <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
+          <Dialog.Close asChild>
+            <button className="Button green">Save changes</button>
+          </Dialog.Close>
+        </div>
+        <Dialog.Close asChild>
+          <button className="IconButton" aria-label="Close">
+            <Cross2Icon />
+          </button>
+        </Dialog.Close>
+      </Dialog.Content>
+    </Dialog.Portal>
+  </Dialog.Root>
+);
 
 export default ThirdFloorQuestions;

@@ -1,26 +1,51 @@
-// Import React and CSS styles
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import * as Dialog from '@radix-ui/react-dialog';
+import { Cross2Icon } from '@radix-ui/react-icons';
+import '../Styles/Dialog.css';
 
-import '../Styles/FieldTripQuestions.css'; 
-
-const FieldTripQuestions = () => {
-  let navigate = useNavigate();
-  return (
-    <div className="field-trip-container">
-      <h1>Field Trip Questions</h1>
-      <div className="question-box">
-        <div className="question">What is your school / organization</div>
-        <input className="input-field" placeholder="input:" />
-
-        <div className="question">What movie would you like to see?</div>
-        <input className="input-field" placeholder="input:" />
-
-        <div className="question">Any other details we should know about?</div>
-        <input className="input-field" placeholder="input:" />
-      </div>
-    </div>
-  );
-}
+const FieldTripQuestions = () => (
+  <Dialog.Root>
+    <Dialog.Trigger asChild>
+      <button className="Button orange">Book Now</button>
+    </Dialog.Trigger>
+    <Dialog.Portal>
+      <Dialog.Overlay className="DialogOverlay" />
+      <Dialog.Content className="DialogContent">
+        <Dialog.Title className="DialogTitle">Questionnaire</Dialog.Title>
+        <Dialog.Description className="DialogDescription">
+          Field Trip Event
+        </Dialog.Description>
+        <fieldset className="Fieldset">
+          <label className="Label" htmlFor="party">
+          Business/organization name?
+          </label>
+          <input className="Input" id="party" defaultValue="enter" />
+        </fieldset>
+        <fieldset className="Fieldset">
+          <label className="Label" htmlFor="attendance">
+            Expected Attendance
+          </label>
+          <input className="Input" id="attendance" defaultValue="enter" />
+        </fieldset>
+        <fieldset className="Fieldset">
+          <label className="Label" htmlFor="movie">
+            What movie will they watch?
+          </label>
+          <input className="Input" id="movie" defaultValue="enter" />
+        </fieldset>
+        <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
+          <Dialog.Close asChild>
+            <button className="Button green">Save changes</button>
+          </Dialog.Close>
+        </div>
+        <Dialog.Close asChild>
+          <button className="IconButton" aria-label="Close">
+            <Cross2Icon />
+          </button>
+        </Dialog.Close>
+      </Dialog.Content>
+    </Dialog.Portal>
+  </Dialog.Root>
+);
 
 export default FieldTripQuestions;
