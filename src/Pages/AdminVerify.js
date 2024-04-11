@@ -11,8 +11,8 @@ const AdminVerify = () => {
     <div className="setup">
       <img src={logo} alt="Logo" style={{ width: '400px', height: '225px' }} />
 
-      <div className="selection-view">
-        <div className="header">In order to continue please enter your credentials</div>
+      <form className="selection-view">
+        <h1 className="header">In order to continue please enter your credentials</h1>
 
         <label className="input-prompt">First Name</label>
         <input required className="input" placeholder="First Name"  />
@@ -23,10 +23,8 @@ const AdminVerify = () => {
         <label className="input-prompt">Passcode</label>
         <input required className="input" placeholder="Passcode" type="password"  />
 
-        <button className="buttons" onClick={() => navigate('/AdminView')}>
-          <div className="button-text">Submit</div>
-        </button>
-      </div>
+        <input type="submit" value="Submit" />
+      </form>
     </div>
   );
 }

@@ -8,6 +8,7 @@ const Home = () =>  {
   let navigate = useNavigate();
 
   return (
+    
     <div className="setup">
       <img src={logo} alt="Logo" style={{ width: '450px', height: '250px' }} />
       <div style={{ overflow: 'scroll' }}>
