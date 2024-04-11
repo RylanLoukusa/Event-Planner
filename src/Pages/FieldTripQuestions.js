@@ -11,9 +11,9 @@ const FieldTripQuestions = () => (
     <Dialog.Portal>
       <Dialog.Overlay className="DialogOverlay" />
       <Dialog.Content className="DialogContent">
-        <Dialog.Title className="DialogTitle">Questionnaire</Dialog.Title>
+        <Dialog.Title className="DialogTitle">Field Trip</Dialog.Title>
         <Dialog.Description className="DialogDescription">
-          Field Trip Event
+          Questionnaire
         </Dialog.Description>
         <fieldset className="Fieldset">
           <label className="Label" htmlFor="party">

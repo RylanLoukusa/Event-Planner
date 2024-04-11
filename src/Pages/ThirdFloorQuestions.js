@@ -11,9 +11,9 @@ const ThirdFloorQuestions = () => (
     <Dialog.Portal>
       <Dialog.Overlay className="DialogOverlay" />
       <Dialog.Content className="DialogContent">
-        <Dialog.Title className="DialogTitle">Questionnaire</Dialog.Title>
+        <Dialog.Title className="DialogTitle">Third Floor Event</Dialog.Title>
         <Dialog.Description className="DialogDescription">
-          Third Floor Event Booking
+            Questionnaire
         </Dialog.Description>
         <fieldset className="Fieldset">
           <label className="Label" htmlFor="party">

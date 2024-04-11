@@ -7,19 +7,6 @@
   padding: 20px;
 }
 
-.buttons {
-  background-color: orange;
-  margin: 10px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  justify-content: 'center';
-}
-
-.button-text {
-  text-align: center;
-}
-
 .selection-view {
   border-width: 4px;
   border-color: black;
@@ -30,14 +17,14 @@
   margin: 10px;
 }
 
-.header-text {
+.header {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .title-text {
   font-size: 40px;
-  padding-bottom: 50px;
+  padding: 50px;
   color: grey;
   text-align: center;
 }

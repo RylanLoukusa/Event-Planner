@@ -5,7 +5,7 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "./Pages/Home";
-import Contact from "./Pages/Contact";
+// import Contact from "./Pages/Contract";
 import Date from "./Pages/Date";
 import Information from "./Pages/Information";
 import InformationSpecial from "./Pages/InformationSpecial";
@@ -32,7 +32,7 @@ function App() {
                 <Route path="/FieldTripQuestions" element={<FieldTripQuestions />} />
                 <Route path="/Summary" element={<Summary />} />
                 <Route path="/Questionaire" element={<Questionaire />} />
-                <Route path="/Contact" element={<Contact />} />
+                {/* <Route path="/Contract" element={<Contact/>} /> */}
                 <Route path="/Date" element={<Date />} />
                 <Route path="/MealDeal" element={<MealDeal />} />
                 <Route path="/Information" element={<Information />} />

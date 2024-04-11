@@ -15,13 +15,13 @@ const AdminVerify = () => {
         <div className="header">In order to continue please enter your credentials</div>
 
         <label className="input-prompt">First Name</label>
-        <input className="input" placeholder="First Name" required />
+        <input required className="input" placeholder="First Name"  />
 
         <label className="input-prompt">Last Name</label>
-        <input className="input" placeholder="Last Name" required />
+        <input required className="input" placeholder="Last Name"  />
 
         <label className="input-prompt">Passcode</label>
-        <input className="input" placeholder="Passcode" type="password" required />
+        <input required className="input" placeholder="Passcode" type="password"  />
 
         <button className="buttons" onClick={() => navigate('/AdminView')}>
           <div className="button-text">Submit</div>

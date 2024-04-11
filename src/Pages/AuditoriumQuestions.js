@@ -6,7 +6,7 @@ import '../Styles/Dialog.css'; // Make sure the path to your CSS file is correct
 
 const AuditoriumQuestions = () => (
   <Dialog.Root>
-  <Dialog.Trigger asChild className="Trigger">
+  <Dialog.Trigger asChild >
     <button className="Button orange">Book Now</button>
   </Dialog.Trigger>
   <Dialog.Portal>
