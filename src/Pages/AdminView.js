@@ -1,48 +1,8 @@
 import React from 'react';
-import * as Dialog from '@radix-ui/react-dialog';
-import { Cross2Icon } from '@radix-ui/react-icons';
 import { useNavigate } from 'react-router-dom';
-
+import AddHost from './AddHostDialog';
 import '../Styles/AdminView.css';
 
-const DialogDemo = () => (
-  <Dialog.Root>
-    <Dialog.Trigger asChild>
-      <button className="buttons">Add a Host</button>
-    </Dialog.Trigger>
-    <Dialog.Portal>
-      <Dialog.Overlay/>
-      <Dialog.Content>
-        <Dialog.Title className="DialogTitle">Edit profile</Dialog.Title>
-        <Dialog.Description className="header">
-          Make changes to your profile here. Click save when you're done.
-        </Dialog.Description>
-        <fieldset >
-          <label className="InputPrompt" htmlFor="name">
-            Name
-          </label>
-          <input className="Input" id="name" defaultValue="Pedro Duarte" />
-        </fieldset>
-        <fieldset >
-          <label className="InputPrompt" htmlFor="username">
-            Username
-          </label>
-          <input className="Input" id="username" defaultValue="@peduarte" />
-        </fieldset>
-        <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
-          <Dialog.Close asChild>
-            <button className="buttons">Save changes</button>
-          </Dialog.Close>
-        </div>
-        <Dialog.Close asChild>
-          <button className="buttons" aria-label="Close">
-            <Cross2Icon />
-          </button>
-        </Dialog.Close>
-      </Dialog.Content>
-    </Dialog.Portal>
-  </Dialog.Root>
-);
 
 const AdminView = () => {
   let navigate = useNavigate();
@@ -50,11 +10,11 @@ const AdminView = () => {
   return (
     <div>
       <div className='setup'>
-        <div>
-          <DialogDemo/>
+        <AddHost/>
+        {/* <div>
           <p> Date </p>
           <p> Party name and type </p>
-        </div>
+        </div> */}
       </div>
       <div className='setup'>
         <h1 className='title-text'>What kind of booking do you require?</h1>
