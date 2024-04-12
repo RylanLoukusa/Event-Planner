@@ -11,7 +11,7 @@ const AdminVerify = () => {
     <div className="setup">
       <img src={logo} alt="Logo" style={{ width: '400px', height: '225px' }} />
 
-      <form className="selection-view">
+      <form className="selection-view" onSubmit={() => navigate('/AdminView')}>
         <h1 className="header">In order to continue please enter your credentials</h1>
 
         <label className="input-prompt">First Name</label>
@@ -23,7 +23,7 @@ const AdminVerify = () => {
         <label className="input-prompt">Passcode</label>
         <input required className="input" placeholder="Passcode" type="password"  />
 
-        <input type="submit" value="Submit" />
+        <button className="Buttons" type="submit" value="Submit" >Submit</button>
       </form>
     </div>
   );

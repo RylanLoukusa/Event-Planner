@@ -9,6 +9,7 @@
   .Buttons {
     background-color: orange;
     margin: 10px;
+    margin-left: 210px;
     padding: 10px;
     border: none;
     cursor: pointer;
