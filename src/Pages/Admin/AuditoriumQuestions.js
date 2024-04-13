@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 
-import '../Styles/Dialog.css'; // Make sure the path to your CSS file is correct
+// import '../Styles/Dialog.css'; // Make sure the path to your CSS file is correct
 
 const AuditoriumQuestions = () => (
   <Dialog.Root>

@@ -59,8 +59,8 @@ const Summary = () => {
         Addons - <WhichAddOns whichAddOnChosen="Pizza" />
       </h2>
       <h2>Date -</h2>
-      <button type="button">Back</button>
-      <button type="button">Proceed to payment</button>
+      <button type="button" onClick={() => navigate('/MealDeal')}>Back</button>
+      <button type="button" onClick={() => navigate('/Contract')}>Continue</button>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "../Styles/AdminVerify.css"
+// import "../Styles/AdminVerify.css"
 
 const AdminVerify = () => {
   let navigate = useNavigate();

@@ -1,0 +1,22 @@
+.setup {
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .titleText {
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: grey;
+    text-align: center;
+  }

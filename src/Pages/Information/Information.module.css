@@ -1,0 +1,11 @@
+.inputPrompt {
+    color: 'orange';
+    width: 400px;
+    font-size: 15px;
+    margin: 10px;
+}
+
+TextField {
+    width: 400px;
+}
+
