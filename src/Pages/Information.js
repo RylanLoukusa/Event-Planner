@@ -25,7 +25,7 @@ const Information = () => {
 
             <p>Booking TIME on DATE</p>
 
-            <button className="buttons" onClick={()=> navigate('/Home')}>Change or Cancel</button>
+            <button className="buttons" onClick={()=> navigate('/')}>Change or Cancel</button>
         </div>
     );
 }
