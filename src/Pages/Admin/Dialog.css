@@ -65,8 +65,8 @@ input {
   background-color: orange;
   color: black;
   box-shadow: 0 2px 10px black;
-  margin: 5px;
-  margin-left: 200px;
+  margin:20;
+  margin-left: 130px;
 }
 .Button.Brown {
   background-color: orange;
@@ -112,16 +112,9 @@ input {
 }
 
 .Input {
-  width: 100%;
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  padding: 0 10px;
-  font-size: 15px;
-  line-height: 1;
-  height: 35px;
+  width:100%;
+  margin:20px;
+
 }
 /* .Input:focus {
   box-shadow: 0 0 0 2px var(--violet-8);

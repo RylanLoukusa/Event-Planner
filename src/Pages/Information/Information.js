@@ -1,36 +1,41 @@
-import TextField from "../../Components/TextField.jsx";
 import { useNavigate } from 'react-router-dom';
 import { React } from "react";
-import styles from "./Information.module.css";
 import GlobalStyles from "../Global.module.css";
 
 const Information = () => {
     let navigate = useNavigate();
 
     return (
+        <div>
+            <button className={GlobalStyles.button} type="button" onClick={() => navigate('/')}>Back</button>
         <div className={GlobalStyles.setup}>
-            <div className={GlobalStyles.page}>
+            
+                <form className={GlobalStyles.page} onSubmit = {() => navigate('/Date')}>
                 <h1 className={GlobalStyles.titleText}>YOUR INFORMATION</h1><br />
-                <div className = {styles.inputPrompt}>
-                    <TextField action="Enter" label="First Name" />
-                    <TextField action="Enter" label="Last Name" />
-                    <TextField action="Enter" label="Email Address" />
-                    <TextField action="Confirm" label="Email Address" />
-                    <TextField action="Enter" label="Phone Number " />
-                    <TextField action="Enter" label="Address" />
-                    <TextField action="Enter" label="City" />
-                    <TextField action="Enter" label="State" />
-                    <TextField action="Enter" label="ZIP" />
-                </div>
 
-                <button type="button" onClick={() => navigate('/')}>Back</button>
-                <button type="button" onClick={() => navigate('/Date')}>Continue</button>
+                <label className={GlobalStyles.inputPrompt}>First Name</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Last Name</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Email</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Address</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>City</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>State</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Zip Code</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                
 
-                <p>Booking TIME on DATE</p>
+                
+                <button type="submit" className={GlobalStyles.button}>Continue</button>
 
-                <button className={styles.buttons} onClick={()=> navigate('/Home')}>Change or Cancel</button>
-            </div>
+                <button className={GlobalStyles.specialButton} onClick={()=> navigate('/')}>Change or Cancel</button>
+            </form>
         </div>
+    </div>    
     );
 }
 

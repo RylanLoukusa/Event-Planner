@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import GlobalStyles from '../Global.module.css';
 
 //import ReactDOM from 'react-dom/client';
 
@@ -47,20 +48,23 @@ const Summary = () => {
   let navigate = useNavigate();
   return (
     <div>
-      <h1>Booking summary</h1>
-      <br></br>
-      <h2>
+      <button className={GlobalStyles.button} type="button" onClick={() => navigate('/MealDeal')}>Back</button>
+
+    <div>
+      <h1 className={GlobalStyles.titleText}>Booking summary</h1>
+      <h2 className={GlobalStyles.headerText}>
         Party Room - <WhichRoom whichPartyRoom="Party Room" />
       </h2>
-      <h2>
+      <h2 className={GlobalStyles.headerText}>
         Meal Deal - <WhichDeal whichMealDeal="Popcorn Extravaganza" />
       </h2>
-      <h2>
+      <h2 className={GlobalStyles.headerText}>
         Addons - <WhichAddOns whichAddOnChosen="Pizza" />
       </h2>
-      <h2>Date -</h2>
-      <button type="button" onClick={() => navigate('/MealDeal')}>Back</button>
-      <button type="button" onClick={() => navigate('/Contract')}>Continue</button>
+      <h2 className={GlobalStyles.headerText}>Date -</h2>
+      <button className={GlobalStyles.button} type="button" onClick={() => navigate('/Contract')}>Continue</button>
+    </div>
+      
     </div>
   );
 }

@@ -5,6 +5,7 @@ import ThirdFloorQuestions from './ThirdFloorQuestions';
 import FieldTripQuestions from './FieldTripQuestions';
 import AuditoriumQuestions from './AuditoriumQuestions';
 import { useNavigate } from 'react-router-dom';
+import GlobalStyles from '../Global.module.css';
 
 
 
@@ -14,9 +15,8 @@ const AdminView = () => {
   let navigate = useNavigate(); 
   return (
     <div>
-      {/* <div className='setup'>
-        <AddHost/>
-      </div> */}
+      <button className={GlobalStyles.button}type="button" onClick={() => navigate('/')}>Back</button>
+
       <div className='setup'>
         <h1 className='title-text'>What kind of booking do you require?</h1>
         <div className='selection-view'>
@@ -31,7 +31,6 @@ const AdminView = () => {
           <AddHost/>
         </div>
       </div>
-      <button type="button" onClick={() => navigate('/')}>Back</button>
     </div>
   );
 };

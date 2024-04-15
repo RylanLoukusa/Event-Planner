@@ -33,20 +33,20 @@ const Payment = () => {
           'meal deal selection with any add-ons selected'
         </p>
         <div>
-          <button onClick={onNoTipPress} className="buttons">No TIP</button>
-          <button onClick={_5percentPress} className="buttons">5%</button>
-          <button onClick={_10percentPress} className="buttons">10%</button>
-          <button onClick={_20percentPress} className="buttons">20%</button>
-          <button onClick={customTip} className="buttons">Custom TIP</button>
+          <button onClick={onNoTipPress} className={GlobalStyles.button}>No TIP</button>
+          <button onClick={_5percentPress} className={GlobalStyles.button}>5%</button>
+          <button onClick={_10percentPress} className={GlobalStyles.button}>10%</button>
+          <button onClick={_20percentPress} className={GlobalStyles.button}>20%</button>
+          <button onClick={customTip} className={GlobalStyles.button}>Custom TIP</button>
         </div>
         <p className={styles.paymentDue}>Payment due today</p>
         <p className={styles.remainingBalance}>You have a remaining balance of ___ due by your booking date. You will receive an email when your payment is due.</p>
         
-        <input className={styles.input} placeholder="Card number" />
-        <input className={styles.input} placeholder="MM/YY" />
-        <input className={styles.input} placeholder="CVV" />
-        <button className={styles.buttons}>
-          <span className={styles.buttonText}>Process my Payment and Book my Event</span>
+        <input className={GlobalStyles.input} placeholder="Card number" /><br/>
+        <input className={GlobalStyles.input} placeholder="MM/YY" /><br/>
+        <input className={GlobalStyles.input} placeholder="CVV" /><br/>
+        <button className={GlobalStyles.button}>
+          <span>Process my Payment and Book my Event</span>
         </button>
       </div>
     </div>

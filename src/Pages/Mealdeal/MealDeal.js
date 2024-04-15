@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import "../Styles/MealDeal.css";
+import "./MealDeal.css";
 
 const MealDealSelectionPage = () => {
   const [selectedMealDeal, setSelectedMealDeal] = useState('');

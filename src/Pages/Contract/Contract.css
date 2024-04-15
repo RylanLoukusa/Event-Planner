@@ -1,7 +1,6 @@
-.signaturePrompt{
-    display: block;
-    margin: 100px auto;
-    border: 2px solid black;
-    width: 500px;
-    height: 200px;       
+.signature{
+    border:2px solid black;
+    width: 75%;
+    height: 200px;
+    margin: 20px;
 }

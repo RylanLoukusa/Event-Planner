@@ -2,7 +2,6 @@
 import { React } from "react";
 import Select from 'react-select'
 import{useNavigate} from 'react-router-dom';
-import styles from "./Information.module.css"
 import GlobalStyles from "../Global.module.css";
 
 const InformationSpecial = () => {
@@ -16,28 +15,29 @@ const InformationSpecial = () => {
 
         return (
             <div className={GlobalStyles.setup}>
-                    <h1 className={GlobalStyles.TitleText}>Request a Special Event</h1><br />
                 
-            <form onSubmit = {() => navigate('/')}>
-            <label className={styles.InputPrompt}>First Name</label>
-            <input className={styles.Input}/>
-                    <label className={styles.InputPrompt}>Last Name</label>
-                    <input required className={styles.Input}/>
-                    <label className={styles.InputPrompt}>Email</label>
-                    <input required className={styles.Input}/>
-                    <label className={styles.InputPrompt}>Address</label>
-                    <input required className={styles.Input}/>
-                    <label className={styles.InputPrompt}>City</label>
-                    <input required className={styles.Input}/>
-                    <label className={styles.InputPrompt}>State</label>
-                    <input required className={styles.Input}/>
-                    <label className={styles.InputPrompt}>Zip Code</label>
-                    <input required className={styles.Input}/>
+            <form className={GlobalStyles.page}onSubmit = {() => navigate('/')}>
+                <h1 className={GlobalStyles.TitleText}>Request a Special Event</h1><br />
+
+                    <label className={GlobalStyles.inputPrompt}>First Name</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Last Name</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Email</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Address</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>City</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>State</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Zip Code</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
                     
-                    <label className={styles.Header}>What type of party do you want to request?</label>
+                    <label className={GlobalStyles.inputPrompt}>What type of party do you want to request?</label>
                     <Select options={partyOptions} required className="select"/>
                         <br/>
-                    <button type='submit' className={styles.buttons} value="Submit">submit</button>
+                    <button type='submit' className={GlobalStyles.button} value="Submit">submit</button>
             </form>
                 
                 </div>
