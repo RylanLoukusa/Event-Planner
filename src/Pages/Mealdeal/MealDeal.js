@@ -140,7 +140,7 @@ const MealDealSelectionPage = () => {
         </div>
       )}
 
-      <button className="continue-button" onClick={() => navigate('/Summary')}>Continue</button>
+      <button className="continue-button" onClick={() => navigate('/Questionaire')}>Continue</button>
     </div>
   );
 }
