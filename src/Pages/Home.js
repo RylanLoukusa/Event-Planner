@@ -10,14 +10,17 @@ const Home = () =>  {
   return (
     
     <div className={GlobalStyles.setup}>
+      <button className={GlobalStyles.specialButton} onClick={() => navigate('/AdminVerify')}>
+            Admin
+          </button>
       <div className={GlobalStyles.page}>
         <img src={logo} alt="Logo" style={{ width: '350px', height: '150px' }} />
         <div style={{ overflow: 'scroll' }}>
           <h1 className={GlobalStyles.titleText}>Book your Party</h1> {/* Use <h1> instead of <title> for in-document titles */}
           <div className={GlobalStyles.selectionView}>
             <h2 className={GlobalStyles.headerText}>Party Room</h2>
-            <div className={GlobalStyles.descriptionText}>
-              <ul>
+            <div >
+              <ul className={GlobalStyles.list}>
                 <li>5 minutes - packages start at $210</li>
                 <li>St. Michael Cinema</li>
                 <li>1st Floor Party Room</li>
@@ -31,8 +34,8 @@ const Home = () =>  {
           </div>
           <div className={GlobalStyles.selectionView}>
             <h2 className={GlobalStyles.headerText}>Dining Room</h2>
-            <div className={GlobalStyles.descriptionText}>
-              <ul>
+            <div>
+              <ul className={GlobalStyles.list}>
                 <li>5 minutes - packages start at $210</li>
                 <li>St. Michael Cinema</li>
                 <li>2nd Floor Dining Room</li>
@@ -44,13 +47,11 @@ const Home = () =>  {
               Book
             </button>
           </div>
-          <button className={GlobalStyles.specialButton} onClick={() => navigate('/InformationSpecial')}>
-            Special Booking
-          </button>
-          <button className={GlobalStyles.specialButton} onClick={() => navigate('/AdminVerify')}>
-            Admin
-          </button>
+          
         </div>
+        <button className={GlobalStyles.specialButton} onClick={() => navigate('/InformationSpecial')}>
+            Special Booking Request
+          </button>
       </div>
     </div>
   );

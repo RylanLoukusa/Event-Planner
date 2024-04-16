@@ -12,12 +12,15 @@ const InformationSpecial = () => {
         { value: 'Field Trip', label: 'Field Trip' },
         { value: 'Rent an Auditorium', label: 'Auditorium' }
       ]
+      const logo = 'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w';
 
         return (
+
             <div className={GlobalStyles.setup}>
+                <img src={logo} />
                 
             <form className={GlobalStyles.page}onSubmit = {() => navigate('/')}>
-                <h1 className={GlobalStyles.TitleText}>Request a Special Event</h1><br />
+                <h1 className={GlobalStyles.titleText}>Request a Special Event</h1><br />
 
                     <label className={GlobalStyles.inputPrompt}>First Name</label>
                     <input required placeholder="Enter" className={GlobalStyles.input}/>
