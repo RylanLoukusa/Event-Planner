@@ -20,6 +20,7 @@
   .list{
     list-style-type: none;
     text-align: left;
+    padding:20px;
   }
   .titleText {
     font-size: 40px;
