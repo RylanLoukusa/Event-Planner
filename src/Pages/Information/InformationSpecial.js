@@ -17,7 +17,7 @@ const InformationSpecial = () => {
         return (
 
             <div className={GlobalStyles.setup}>
-                <img src={logo} />
+                <img src={logo}/>
                 
             <form className={GlobalStyles.page}onSubmit = {() => navigate('/')}>
                 <h1 className={GlobalStyles.titleText}>Request a Special Event</h1><br />
