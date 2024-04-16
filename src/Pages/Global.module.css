@@ -5,7 +5,11 @@
     flex-direction: column;
     padding: 20px;
   }
-
+  .select{
+    width:200px;
+    padding:10px;
+    height:10px;
+  }
   .page {
     align-items: center;
     display: flex;
@@ -13,7 +17,10 @@
     width: 500px;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   }
-
+  .list{
+    list-style-type: none;
+    text-align: left;
+  }
   .titleText {
     font-size: 40px;
     padding-bottom: 10px;
@@ -33,6 +40,7 @@
     padding: 5px;
     padding-bottom: 10px;
     margin: 10px;
+    text-align: center;
   }
   .headerText {
     font-weight: bold;
@@ -55,6 +63,8 @@
     padding:20px;
   }
   .input{
-    width: 250px;
+    width: 300px;
     margin:10px;
+    border:1px solid black;
+    padding:10px;
   }
