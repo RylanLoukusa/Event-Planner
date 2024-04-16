@@ -4,20 +4,21 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import Home from "./Pages/Home";
-import Contract from "./Pages/Contract";
-import Date from "./Pages/Date";
-import Information from "./Pages/Information";
-import InformationSpecial from "./Pages/InformationSpecial";
-import MealDeal from "./Pages/MealDeal";
-import Payment from "./Pages/Payment";
-import Questionaire from "./Pages/Questionaire";
-import Summary from "./Pages/Summary";
-import AuditoriumQuestions from "./Pages/AuditoriumQuestions";
-import FieldTripQuestions from "./Pages/FieldTripQuestions";
-import ThirdFloorQuestions from "./Pages/ThirdFloorQuestions";
-import AdminVerify from "./Pages/AdminVerify";
-import AdminView from "./Pages/AdminView";
+import Home from "./Pages/Home.js";
+import Contract from "./Pages/Contract/Contract.js";
+import Date from "./Pages/Date/Date.js";
+import Information from "./Pages/Information/Information.js";
+import InformationSpecial from "./Pages/Information/InformationSpecial.js";
+import MealDeal from "./Pages/Mealdeal/MealDeal.js";
+import Payment from "./Pages/Payment/Payment.js";
+import Questionaire from "./Pages/Questionaire/Questionaire.js";
+import Summary from "./Pages/Summary/Summary.js";
+import AuditoriumQuestions from "./Pages/Admin/AuditoriumQuestions.js";
+import FieldTripQuestions from "./Pages/Admin/FieldTripQuestions.js";
+import ThirdFloorQuestions from "./Pages/Admin/ThirdFloorQuestions.js";
+import AdminVerify from "./Pages/Admin/AdminVerify.js";
+import AdminView from "./Pages/Admin/AdminView.js";
+import AddHost from "./Pages/Admin/AddHostDialog.js"
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/AdminVerify" element={<AdminVerify />} />
                 <Route path="/AdminView" element={<AdminView />} />
+                <Route path="/AddHost" element={<AddHost />} />
                 <Route path="/Payment" element={<Payment />} />
                 <Route path="/AuditoriumQuestions" element={<AuditoriumQuestions />} />
                 <Route path="/ThirdFloorQuestions" element={<ThirdFloorQuestions />} />
