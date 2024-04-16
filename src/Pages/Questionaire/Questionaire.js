@@ -31,7 +31,7 @@ const Questionaire = () => {
         <label className={GlobalStyles.inputPrompt}>What is you seating preference?</label>
         <Select options={seatingOptions} required/>
         <label className={GlobalStyles.inputPrompt}>Any questions or concerns the Cinema should know about?</label>
-        <input required placeholder='Enter' className={GlobalStyles.input}/>
+        <input placeholder='Enter' className={GlobalStyles.input}/>
 
         <button className={GlobalStyles.button} type='submit'>
           View booking summary
