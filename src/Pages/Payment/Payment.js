@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import styles from "./Payment.css";
+import styles from "./Payment.module.css";
 import GlobalStyles from "../Global.module.css";
 
 const Payment = () => {
@@ -25,7 +25,7 @@ const Payment = () => {
 
   return (
     <div className={GlobalStyles.setup}>
-      <h1 className={GlobalStyles.titleText}>St. Michael Cinema</h1>
+      <h1 className={GlobalStyles.titleText}>Contract</h1>
       <div style={{ overflowY: 'scroll' }}>
         <p className={styles.paymentInfo}>
           PAYMENT {'\n'}
