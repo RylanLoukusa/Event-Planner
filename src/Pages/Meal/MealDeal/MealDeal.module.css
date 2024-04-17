@@ -1,0 +1,53 @@
+.container {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mealOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.mealOption {
+    padding: 5px;
+}
+
+.button {
+    margin: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonSelected {
+    margin: 10px;
+    background-color:orange;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .detailContainer {
+    margin: 20px 0px;
+  }
+
+  .detailItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+ .numberInput {
+    width: 30px;
+    border-bottom: 1px solid black;
+    margin-left: 15px;
+    margin-top: 10px;
+ }
+  
