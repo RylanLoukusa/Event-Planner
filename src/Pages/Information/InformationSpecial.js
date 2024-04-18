@@ -27,6 +27,8 @@ const InformationSpecial = () => {
                     <label className={GlobalStyles.inputPrompt}>Last Name</label>
                     <input required placeholder="Enter" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>Email</label>
+                    <label className={GlobalStyles.inputPrompt}>Phone</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
                     <input required placeholder="Enter" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>Address</label>
                     <input required placeholder="Enter" className={GlobalStyles.input}/>

@@ -18,6 +18,8 @@ const Information = () => {
                     <input required placeholder="Enter" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>Email</label>
                     <input required placeholder="Enter" className={GlobalStyles.input}/>
+                    <label className={GlobalStyles.inputPrompt}>Email</label>
+                    <input required placeholder="Enter" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>Address</label>
                     <input required placeholder="Enter" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>City</label>
