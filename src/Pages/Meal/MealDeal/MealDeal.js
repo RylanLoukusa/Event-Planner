@@ -12,7 +12,9 @@ const MealDeal = () => {
     'Hot Dogs With Fries': 0,
     'Chicken Strips With Fries': 0
   });
-
+const handleChange = (field, value) => {
+    setDetails(prev => ({ ...prev, [field]: value }));
+  };
   const mealDeals = ['Popcorn Extravaganza', 'Reel Pizza Deal', 'Real Meal Deal'];
 
   const handleSelect = (deal) => {
@@ -23,9 +25,7 @@ const MealDeal = () => {
     }
   };
 
-  const handleChange = (field, value) => {
-    setDetails(prev => ({ ...prev, [field]: value }));
-  };
+  
 
   return (
     <div className={styles.container}>

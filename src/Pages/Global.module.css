@@ -35,7 +35,15 @@
     text-align: center;
     margin:20px;
     border-radius: 4px;
-    padding:2px;
+    padding: 5px;
+  }
+  .selectedButton{
+    background-color:black;
+    color:orange;
+    text-align:center;
+    margin:20px;
+    border-radius: 4px;
+    padding:5px;
   }
   .selectionView {
     border: 4px solid black;

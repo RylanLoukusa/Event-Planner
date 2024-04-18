@@ -1,7 +1,12 @@
 import React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
-import './Dialog.css'
+import './Dialog.css';
+import Select from 'react-select';
+import GlobalStyles from '../Global.module.css';
+
+const seatingOptions = [{label:'Front two Rows'},{label:'Middle of the Auditorium'}, {label:'Back two rows'}];
+
 const FieldTripQuestions = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
@@ -15,22 +20,28 @@ const FieldTripQuestions = () => (
           Questionnaire
         </Dialog.Description>
         <fieldset className="Fieldset">
-          <label className="Label" htmlFor="party">
+          <label className={GlobalStyles.descriptionText} htmlFor="party">
           Business/organization name?  
           </label>
-          <input className="Input" id="party" defaultValue="enter" />
+          <input className={GlobalStyles.input} id="party" defaultValue="enter" />
         </fieldset>
         <fieldset className="Fieldset">
-          <label className="Label" htmlFor="attendance">
+          <label className={GlobalStyles.descriptionText} htmlFor="attendance">
             Expected Attendance  
           </label>
-          <input className="Input" id="attendance" defaultValue="enter" />
+          <input className={GlobalStyles.input} id="attendance" defaultValue="enter" />
         </fieldset>
         <fieldset className="Fieldset">
-          <label className="Label" htmlFor="movie">
+          <label className={GlobalStyles.descriptionText} htmlFor="movie">
             What movie will they watch?  
           </label>
-          <input className="Input" id="movie" defaultValue="enter" />
+          <input className={GlobalStyles.input} id="movie" defaultValue="enter" />
+        </fieldset>
+        <fieldset className="Fieldset">
+          <label className={GlobalStyles.descriptionText}>
+            Seating preference:
+          </label>
+          <Select options={seatingOptions}/>
         </fieldset>
         <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
           <Dialog.Close asChild>

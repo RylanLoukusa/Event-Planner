@@ -3,14 +3,23 @@ import Select from 'react-select'
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import GlobalStyles from '../Global.module.css'
-
-import './Dialog.css'; // Make sure the path to your CSS file is correct
+import './Dialog.css'; 
 
 const AuditoriumQuestions = () => {
 
   const [selectedmovieOption, setSelectedMovieOption] = useState(null);
-  const movieOptions = [{value: 'movieoption1', label:'Movie playing in the Theater'}, {value: 'movieoption2', label:'Bringing personal movie'}];
-  const seatingOptions = [{value:'seatoption1', label:'Front two Rows'},{value:'seatoption2', label:'Middle of the Auditorium'},{value:'seatoption3', label:'Back two rows'}]
+  const movieOptions = ['Movie playing in the Theater', 'Bringing personal movie'];
+  const seatingOptions = [{label:'Front two Rows'},{label:'Middle of the Auditorium'}, {label:'Back two rows'}];
+  const formatOptions = [{label:'DVD'}, {label:'Blu-Ray'},{label:'Laptop'} ];
+ const handleMovieSelect = (movie)=> {
+  if (selectedmovieOption === movie) {
+    setSelectedMovieOption(null);
+  } else {
+    setSelectedMovieOption(movie);
+  }
+};
+ 
+ 
   return(
     <Dialog.Root>
     <Dialog.Trigger asChild >
@@ -24,11 +33,56 @@ const AuditoriumQuestions = () => {
           Questionnaire
         </Dialog.Description>
         <div>
-        <label className={GlobalStyles.headerText}>Movie Select</label>
-        <Select options={movieOptions} />
-          <br/>
-      <label className={GlobalStyles.headerText}>What movie would you like to see?</label>
-        <input className={GlobalStyles.input} placeholder="Enter"/>
+        <div className={GlobalStyles.setup}>
+        {movieOptions.map((movie) => (
+          <button
+            key={movie}
+            onClick={() => handleMovieSelect(movie)}
+            className={selectedmovieOption === movie ? GlobalStyles.selectedButton : GlobalStyles.button}
+          >
+            {movie}
+          </button>
+        ))}
+        </div>
+        {selectedmovieOption && (
+        <div >
+          {selectedmovieOption === 'Movie playing in the Theater' && (
+            <div>
+             <label className={GlobalStyles.headerText}>
+              Movie Title:
+             </label>
+             <input placeholder='Enter'className={GlobalStyles.input}/>
+             <br/>
+             <label className={GlobalStyles.headerText}>
+              Seating preference:
+             </label>
+             <Select options={seatingOptions}/>
+            </div>
+          )}
+          
+          {selectedmovieOption === 'Bringing personal movie' && (
+            <div>
+              <label className={GlobalStyles.headerText}>
+              Movie Title:
+             </label>
+             <input placeholder='Enter'className={GlobalStyles.input}/>
+             <br/>
+              <label className={GlobalStyles.headerText}>
+                Format of the movie:
+              </label>
+              <Select options={formatOptions}/>
+              <label className={GlobalStyles.headerText}>
+              Seating preference:
+             </label>
+             <Select options={seatingOptions}/>
+            </div>
+          )}
+          </div>
+        )}
+        
+        
+       
+        
         <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
           <Dialog.Close asChild>
             <button className="Button">Save changes</button>

@@ -2,6 +2,7 @@ import React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import './Dialog.css';
+import GlobalStyles from '../Global.module.css'
 
 const AddHost = () => (
   <Dialog.Root>
@@ -13,25 +14,25 @@ const AddHost = () => (
       <Dialog.Content className="DialogContent">
         <Dialog.Title className="DialogTitle">Add A Host</Dialog.Title>
         <Dialog.Description className="DialogDescription">
-          Make changes to your profile here. Click save when you're done.
+          Identify the party and the Host below. Click save when you're done.
         </Dialog.Description>
         <fieldset className="Fieldset">
-          <label className="Label" htmlFor="party">
-            Party Name
+          <label className={GlobalStyles.descriptionText} htmlFor="party">
+            Party Name:
           </label>
-          <input className="Input" id="party" defaultValue="enter party name" />
+          <input className={GlobalStyles.input} id="party" placeholder="enter party name" />
         </fieldset>
         <fieldset className="Fieldset">
-          <label className="Label" htmlFor="first name">
-            First Name
+          <label className={GlobalStyles.descriptionText}  htmlFor="first name">
+            First Name:
           </label>
-          <input className="Input" id="first name" defaultValue="enter first name" />
+          <input className={GlobalStyles.input} id="first name" placeholder="enter first name" />
         </fieldset>
         <fieldset className="Fieldset">
-          <label className="Label" htmlFor="last name">
-            Last Name
+          <label className={GlobalStyles.descriptionText}  htmlFor="last name">
+            Last Name:
           </label>
-          <input className="Input" id="last name" defaultValue="enter last name" />
+          <input className={GlobalStyles.input} id="last name" placeholder="enter last name" />
         </fieldset>
         <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
           <Dialog.Close asChild>
