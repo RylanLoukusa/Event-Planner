@@ -13,6 +13,7 @@ import MealDeal from "./Pages/Mealdeal/MealDeal.js";
 import Payment from "./Pages/Payment/Payment.js";
 import Questionaire from "./Pages/Questionaire/Questionaire.js";
 import Summary from "./Pages/Summary/Summary.js";
+import AvailableTimes from "./Pages/AvailableTimes/AvailableTimes.js";
 import AuditoriumQuestions from "./Pages/Admin/AuditoriumQuestions.js";
 import FieldTripQuestions from "./Pages/Admin/FieldTripQuestions.js";
 import ThirdFloorQuestions from "./Pages/Admin/ThirdFloorQuestions.js";
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/ThirdFloorQuestions" element={<ThirdFloorQuestions />} />
                 <Route path="/FieldTripQuestions" element={<FieldTripQuestions />} />
                 <Route path="/Summary" element={<Summary />} />
+                <Route path="/AvailableTimes" element={<AvailableTimes />} />
                 <Route path="/Questionaire" element={<Questionaire />} />
                 <Route path="/Contract" element={<Contract/>} />
                 <Route path="/Date" element={<Date />} />

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Calendar from 'react-calendar';
 import { useNavigate } from 'react-router-dom';
+import 'react-calendar/dist/Calendar.css';
 import GlobalStyles from '../Global.module.css'
 
 
-const Date = ()  =>  {
+const AvailableTimes = ()  =>  {
     let navigate = useNavigate();
     const [value, onChange] = useState(new Date());
     const numWeeks = 2;
@@ -87,4 +88,4 @@ const Date = ()  =>  {
     );
 }
 
-export default Date;
+export default AvailableTimes;
