@@ -10,11 +10,9 @@ const Home = () =>  {
   return (
     
     <div className={GlobalStyles.setup}>
-      <button className={GlobalStyles.specialButton} onClick={() => navigate('/AdminVerify')}>
-            Admin
-          </button>
+      
       <div className={GlobalStyles.page}>
-        <img src={logo} alt="Logo" style={{ width: '350px', height: '150px' }} />
+        <img src={logo} alt="Logo" style={{ width: '400px', height: '200px' }} />
         <div style={{ overflow: 'scroll' }}>
           <h1 className={GlobalStyles.titleText}>Book your Party</h1> {/* Use <h1> instead of <title> for in-document titles */}
           <div className={GlobalStyles.selectionView}>
@@ -51,6 +49,9 @@ const Home = () =>  {
         </div>
         <button className={GlobalStyles.specialButton} onClick={() => navigate('/InformationSpecial')}>
             Special Booking Request
+          </button>
+          <button className={GlobalStyles.specialButton} onClick={() => navigate('/AdminVerify')}>
+            Admin
           </button>
       </div>
     </div>
