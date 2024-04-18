@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Checkout from '../../Components/Checkout';
 
 import styles from "./Payment.module.css";
 import GlobalStyles from "../Global.module.css";
@@ -20,7 +21,7 @@ const Payment = () => {
     alert("Thank you! Your tip will be added to your total.");
   }
   const customTip = () => {
-    alert("How much would you like to tip?");
+    alert("How much would you like to tip?"); // add user input box
   }
 
   return (
@@ -41,14 +42,9 @@ const Payment = () => {
         </div>
         <p className={styles.paymentDue}>Payment due today</p>
         <p className={styles.remainingBalance}>You have a remaining balance of ___ due by your booking date. You will receive an email when your payment is due.</p>
-        
-        <input className={GlobalStyles.input} placeholder="Card number" /><br/>
-        <input className={GlobalStyles.input} placeholder="MM/YY" /><br/>
-        <input className={GlobalStyles.input} placeholder="CVV" /><br/>
-        <button className={GlobalStyles.button}>
-          <span>Process my Payment and Book my Event</span>
-        </button>
       </div>
+
+      <Checkout />
     </div>
   );
 }

@@ -19,6 +19,7 @@ import ThirdFloorQuestions from "./Pages/Admin/ThirdFloorQuestions.js";
 import AdminVerify from "./Pages/Admin/AdminVerify.js";
 import AdminView from "./Pages/Admin/AdminView.js";
 import AddHost from "./Pages/Admin/AddHostDialog.js"
+import Confirmation from "./Pages/Confirmation/Confirmation.js";
 
 function App() {
     return (
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/MealDeal" element={<MealDeal />} />
                 <Route path="/Information" element={<Information />} />
                 <Route path="/InformationSpecial" element={<InformationSpecial />} />
+                <Route path="/Confirmation" element={<Confirmation />} />
             </Routes>
         </Router>
     );
