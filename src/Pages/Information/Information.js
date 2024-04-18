@@ -7,7 +7,6 @@ const Information = () => {
 
     return (
         <div>
-            <button className={GlobalStyles.button} type="button" onClick={() => navigate('/')}>Back</button>
         <div className={GlobalStyles.setup}>
             
                 <form className={GlobalStyles.page} onSubmit = {() => navigate('/Date')}>

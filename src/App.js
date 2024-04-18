@@ -9,7 +9,7 @@ import Contract from "./Pages/Contract/Contract.js";
 import Date from "./Pages/Date/Date.js";
 import Information from "./Pages/Information/Information.js";
 import InformationSpecial from "./Pages/Information/InformationSpecial.js";
-import MealDeal from "./Pages/Mealdeal/MealDeal.js";
+import MealDeal from "./Pages/Meal/Meal.js";
 import Payment from "./Pages/Payment/Payment.js";
 import Questionaire from "./Pages/Questionaire/Questionaire.js";
 import Summary from "./Pages/Summary/Summary.js";

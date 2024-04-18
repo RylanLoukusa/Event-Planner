@@ -1,11 +1,8 @@
-import React, { Component, useRef, useState, useEffect } from 'react';
-import {render} from 'react-dom';
+import React, { useRef, useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import { useNavigate } from "react-router-dom";
 import GlobalStyles from '../Global.module.css'
-import'./Contract.css';
-
-
+import styles from './Contract.module.css';
 
 const Contract = ()  =>  {
   let navigate = useNavigate();
@@ -23,7 +20,9 @@ const Contract = ()  =>  {
   useEffect(() => {
     console.log(signature);
   }, [signature]);
-  return <div>
+
+  return (
+     <div>
         <button className={GlobalStyles.button}type="button" onClick={() => navigate('/Summary')}>Back</button>
 
     <h2 className = {GlobalStyles.headerText}>
@@ -51,6 +50,7 @@ const Contract = ()  =>  {
     
       <button className={GlobalStyles.button}type="button" onClick={() => navigate('/Payment')}>Continue</button>
   </div>
+  );
 }
 
 export default Contract;
