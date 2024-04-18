@@ -1,8 +1,7 @@
 import React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
-// import '../Styles/Dialog.css';
-
+import './Dialog.css'
 const FieldTripQuestions = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
@@ -17,19 +16,19 @@ const FieldTripQuestions = () => (
         </Dialog.Description>
         <fieldset className="Fieldset">
           <label className="Label" htmlFor="party">
-          Business/organization name?
+          Business/organization name?  
           </label>
           <input className="Input" id="party" defaultValue="enter" />
         </fieldset>
         <fieldset className="Fieldset">
           <label className="Label" htmlFor="attendance">
-            Expected Attendance
+            Expected Attendance  
           </label>
           <input className="Input" id="attendance" defaultValue="enter" />
         </fieldset>
         <fieldset className="Fieldset">
           <label className="Label" htmlFor="movie">
-            What movie will they watch?
+            What movie will they watch?  
           </label>
           <input className="Input" id="movie" defaultValue="enter" />
         </fieldset>
