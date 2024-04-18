@@ -17,18 +17,20 @@ const AdminView = () => {
     <div>
       <button className={GlobalStyles.button}type="button" onClick={() => navigate('/')}>Back</button>
 
-      <div className='setup'>
-        <h1 className='title-text'>What kind of booking do you require?</h1>
-        <div className='selection-view'>
-          <h2 className='header'>Auditorium Rental</h2>
-          <AuditoriumQuestions/>
-
-          <h2 className='header'>Third Floor Event</h2>
-          <ThirdFloorQuestions/>
-
-          <h2 className='header'>Field Trip</h2>
-          <FieldTripQuestions/>
+      <div className={GlobalStyles.setup}>
+        <div className={GlobalStyles.page}>
           <AddHost/>
+          <h1 className={GlobalStyles.titleText}>What kind of booking do you require?</h1>
+          <div className='selection-view'>
+            <h2 className={GlobalStyles.headerText}>Auditorium Rental</h2>
+            <AuditoriumQuestions/>
+
+            <h2 className={GlobalStyles.headerText}>Third Floor Event</h2>
+            <ThirdFloorQuestions/>
+
+            <h2 className={GlobalStyles.headerText}>Field Trip</h2>
+            <FieldTripQuestions/>
+          </div>
         </div>
       </div>
     </div>

@@ -37,10 +37,11 @@ const Questionaire = () => {
           View booking summary
         </button>
         <p>Booking TIME on DATE</p>
+      
+        <button className={GlobalStyles.specialButton} onClick={() => navigate('/')}>
+          Change or Cancel
+        </button>
       </form>
-      <button className={GlobalStyles.specialButton} onClick={() => navigate('/')}>
-        Change or Cancel
-      </button>
     </div>
   );
 };

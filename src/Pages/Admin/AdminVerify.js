@@ -12,7 +12,7 @@ const AdminVerify = () => {
 
       <form className={GlobalStyles.page} onSubmit={() => navigate('/AdminView')}>
         <img src={logo} alt="Logo" style={{ width: '400px', height: '225px' }} />
-        <h1 className={GlobalStyles.headerText}>In order to continue please enter your credentials</h1>
+        <h1 className={GlobalStyles.headerText}>Enter your credentials</h1>
 
         <label className={GlobalStyles.inputPrompt}>First Name</label>
         <input required className={GlobalStyles.input} placeholder="First Name"  />

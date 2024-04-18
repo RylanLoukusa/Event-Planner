@@ -25,7 +25,7 @@ const Payment = () => {
 
   return (
     <div className={GlobalStyles.setup}>
-      <h1 className={GlobalStyles.titleText}>Contract</h1>
+      <h1 className={GlobalStyles.titleText}>Payment</h1>
       <div style={{ overflowY: 'scroll' }}>
         <p className={styles.paymentInfo}>
           PAYMENT {'\n'}

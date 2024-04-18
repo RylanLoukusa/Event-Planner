@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import GlobalStyles from './Global.module.css';
+import GlobalStyles from '../Global.module.css';
+import styles from './Home.module.css';
 // image logo
 const logo = 'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w';
 
@@ -10,17 +11,17 @@ const Home = () =>  {
   return (
     
     <div className={GlobalStyles.setup}>
-      <button className={GlobalStyles.specialButton} onClick={() => navigate('/AdminVerify')}>
-            Admin
-          </button>
       <div className={GlobalStyles.page}>
+      <button className={styles.adminButton} onClick={() => navigate('/AdminVerify')}>
+              Admin
+          </button>
         <img src={logo} alt="Logo" style={{ width: '350px', height: '150px' }} />
         <div style={{ overflow: 'scroll' }}>
           <h1 className={GlobalStyles.titleText}>Book your Party</h1> {/* Use <h1> instead of <title> for in-document titles */}
           <div className={GlobalStyles.selectionView}>
             <h2 className={GlobalStyles.headerText}>Party Room</h2>
             <div >
-              <ul className={GlobalStyles.list}>
+              <ul className={styles.list}>
                 <li>5 minutes - packages start at $210</li>
                 <li>St. Michael Cinema</li>
                 <li>1st Floor Party Room</li>
@@ -35,7 +36,7 @@ const Home = () =>  {
           <div className={GlobalStyles.selectionView}>
             <h2 className={GlobalStyles.headerText}>Dining Room</h2>
             <div>
-              <ul className={GlobalStyles.list}>
+              <ul className={styles.list}>
                 <li>5 minutes - packages start at $210</li>
                 <li>St. Michael Cinema</li>
                 <li>2nd Floor Dining Room</li>
@@ -46,12 +47,13 @@ const Home = () =>  {
             <button className={GlobalStyles.button} onClick={() => navigate('/Information')}>
               Book
             </button>
-          </div>
-          
+          </div>       
         </div>
-        <button className={GlobalStyles.specialButton} onClick={() => navigate('/InformationSpecial')}>
-            Special Booking Request
-          </button>
+        <div className={styles.buttonContainer}>
+            <button className={styles.specialButton} onClick={() => navigate('/InformationSpecial')}>
+                Special Booking Request
+            </button>
+        </div>
       </div>
     </div>
   );
