@@ -20,8 +20,8 @@
   }
   .list{
     list-style-type: none;
-    text-align: left;
-    padding:20px;
+    text-align: center;
+    padding:10px 20px;
   }
   .titleText {
     font-size: 40px;
@@ -35,7 +35,7 @@
     text-align: center;
     margin:20px;
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
   }
   .selectedButton{
     background-color:black;
@@ -65,8 +65,10 @@
   .specialButton {
     text-align: center;
     font-size: 15px;
-    margin: 20px;
-    background-color:white;
+    margin-left: 600px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color:lightgray;
   }
   .inputPrompt {
     color:orange;
@@ -77,4 +79,8 @@
     margin:10px;
     border:1px solid black;
     padding:10px;
+  }
+
+  li {
+    padding: 5px;
   }
