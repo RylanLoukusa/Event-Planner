@@ -22,7 +22,7 @@ const AvailableTimes = ()  =>  {
     };    
 
     return (
-        <div>
+        <div className={GlobalStyles.setup}>
             <h1>Please select a date:</h1>
             <Calendar
                 selectRange={true}
