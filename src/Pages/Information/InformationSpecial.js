@@ -123,7 +123,7 @@ class InformationSpecial extends Component{
                     <label className={GlobalStyles.inputPrompt}>What type of party do you want to request?</label>
                     <Select options={partyOptions} required className="select"/>
                         <br/>
-                        <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>submit</button>
+                        <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>Submit</button>
             </div>
                 
             </div>

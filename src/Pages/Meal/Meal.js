@@ -26,6 +26,7 @@ const MealDealSelectionPage = () => {
   return (
     <div className={GlobalStyles.setup}>
       <div className={GlobalStyles.page}>
+        <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/AvailableTimes')}>Back</button>
         <h2 className={GlobalStyles.titleText}>Meal Deal</h2>
         <MealDeal/>
         <DrinkDeal/>

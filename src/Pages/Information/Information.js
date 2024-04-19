@@ -82,11 +82,9 @@ class Information extends Component{
         const{customers}=this.state;
         //let navigate = useNavigate();
         return (
-            <div>
-                <button className={GlobalStyles.button} type="button" onClick={() => this.goHome()}>Back</button>
             <div className={GlobalStyles.setup}>
-                
                 <div className={GlobalStyles.page}>
+                    <button className={GlobalStyles.backButton} type="button" onClick={() => this.goHome()}>Back</button>
                     <h1 className={GlobalStyles.titleText}>YOUR INFORMATION</h1><br />
 
                     <label className={GlobalStyles.inputPrompt}>First Name</label>
@@ -107,11 +105,8 @@ class Information extends Component{
                         <input required placeholder="Enter" id="zip" className={GlobalStyles.input}/>
                     
                     <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>Continue</button>
-
-                    <button className={GlobalStyles.specialButton} onClick={()=>this.goHome()}>Change or Cancel</button>
                 </div>
-            </div>
-        </div>    
+            </div>   
         );
     }
 }
