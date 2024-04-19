@@ -1,4 +1,3 @@
-import QuestionnaireTextField from '../../Components/QuestionnaireTextField.jsx';
 import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 
@@ -17,6 +16,7 @@ const Questionaire = () => {
   return (
     <div className={GlobalStyles.setup}>
       <form onSubmit={() => navigate('/Summary')} className={GlobalStyles.page}>
+        <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/MealDeal')}>Back</button>
         <h1 className={GlobalStyles.titleText}>Questionnaire</h1>
         <label className={GlobalStyles.inputPrompt}>What is your birthday child's name and age? </label>
         <input required placeholder='Enter' className={GlobalStyles.input}/>
@@ -34,13 +34,10 @@ const Questionaire = () => {
         <input placeholder='Enter' className={GlobalStyles.input}/>
 
         <button className={GlobalStyles.button} type='submit'>
-          View booking summary
+          View Booking Summary
         </button>
         <p>Booking TIME on DATE</p>
       </form>
-      <button className={GlobalStyles.specialButton} onClick={() => navigate('/')}>
-        Change or Cancel
-      </button>
     </div>
   );
 };

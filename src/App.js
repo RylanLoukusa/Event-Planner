@@ -4,9 +4,8 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import Home from "./Pages/Home.js";
+import Home from "./Pages/Home/Home.js";
 import Contract from "./Pages/Contract/Contract.js";
-import Date from "./Pages/Date/Date.js";
 import Information from "./Pages/Information/Information.js";
 import InformationSpecial from "./Pages/Information/InformationSpecial.js";
 import MealDeal from "./Pages/Meal/Meal.js";
@@ -38,7 +37,6 @@ function App() {
                 <Route path="/AvailableTimes" element={<AvailableTimes />} />
                 <Route path="/Questionaire" element={<Questionaire />} />
                 <Route path="/Contract" element={<Contract/>} />
-                <Route path="/Date" element={<Date />} />
                 <Route path="/MealDeal" element={<MealDeal />} />
                 <Route path="/Information" element={<Information />} />
                 <Route path="/InformationSpecial" element={<InformationSpecial />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import GlobalStyles from './Global.module.css';
+import GlobalStyles from '../Global.module.css';
 import styles from './Home.module.css'
 // image logo
 const logo = 'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w';
