@@ -29,21 +29,21 @@ async checkAdmin(){
     
     for (var i=0; i < fetchedData.length; i++)
     {
-      if (fetchedData[i].First_name == fname)
+      if (fetchedData[i].First_name === fname)
       {
         hasFName = true;
       }
     }
     for (var i=0; i < fetchedData.length; i++)
     {
-      if (fetchedData[i].Last_name == lname)
+      if (fetchedData[i].Last_name === lname)
       {
         hasLName = true;
       }
     }
     for (var i=0; i < fetchedData.length; i++)
     {
-      if (fetchedData[i].passcode == pass)
+      if (fetchedData[i].passcode === pass)
       {
         hasPasscode = true;
       }
