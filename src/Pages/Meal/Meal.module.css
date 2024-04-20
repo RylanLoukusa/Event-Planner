@@ -19,13 +19,3 @@
     margin-left: 15px;
     margin-top: 10px;
  }
-
- .continueButton {
-    padding: 8px 16px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: orange;
-    transition: background-color 0.3s;
- }
