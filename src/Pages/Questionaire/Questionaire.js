@@ -1,27 +1,33 @@
 import { useNavigate } from 'react-router-dom';
-import Select from 'react-select';
 
 import { React, useState } from 'react';
 import GlobalStyles from '../Global.module.css';
 
+// const seatingOptions = [
+//   { value: 'Front', label: 'Front two rows' },
+//   { value: 'Middle', label: 'Middle of the auditorium' },
+//   { value: 'Back', label: 'Back two rows' }
+// ]
 
-const seatingOptions = [
-  { value: 'Front', label: 'Front two rows' },
-  { value: 'Middle', label: 'Middle of the auditorium' },
-  { value: 'Back', label: 'Back two rows' }
-]
+
 
 const Questionaire = () => {
 
-  const [selectedOption, setSelectedOption] = useState(null);
+  const seatingOptions = ["Front", "Middle", "Back"];
+  const [selectedOption, setSelectedOption] = useState(null);  
 
-  const handleChange = (option) => {
-    setSelectedOption(option);
+  const handleSelect = (option) => {
+    if (selectedOption === option) {
+        setSelectedOption(null);
+        } else {
+          setSelectedOption(option);
+        }
     console.log("Selected option:", option);
   };
+
   let navigate = useNavigate();
 
-  
+
   return (
     <div className={GlobalStyles.setup}>
       <form onSubmit={() => navigate('/Summary')} className={GlobalStyles.page}>
@@ -38,7 +44,18 @@ const Questionaire = () => {
         <label className={GlobalStyles.inputPrompt}>What movie would you like to see?</label>
         <input required placeholder='Enter' className={GlobalStyles.input}/>
         <label className={GlobalStyles.inputPrompt}>What is you seating preference?</label>
-        <Select options={seatingOptions} value={selectedOption} onChange={handleChange} required/>
+        {/* <Select options={seatingOptions} value={selectedOption} onChange={handleChange} required/> */}
+        <div>
+          {seatingOptions.map((option) => (
+              <button
+                  key={option}
+                  onClick={() => handleSelect(option)}
+                  className={selectedOption === option ? GlobalStyles.buttonSelected : GlobalStyles.button}
+              >
+                  {option}
+              </button>
+          ))}
+        </div>
         <label className={GlobalStyles.inputPrompt}>Any questions or concerns the Cinema should know about?</label>
         <input placeholder='Enter' className={GlobalStyles.input}/>
 

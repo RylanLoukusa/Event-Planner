@@ -57,33 +57,6 @@ const AvailableTimes = ()  =>  {
                         </button>
                     ))}
                 </div>
-                {/* <form>
-                    <input
-                        type="radio"
-                        id="option1"
-                        value="option1"
-                        checked={selectedValue === 'option1'}
-                        onChange={() => handleRadioChange('option1')}
-                    />
-                    10am
-                    <input
-                        type="radio"
-                        id="option2"
-                        value="option2"
-                        checked={selectedValue === 'option2'}
-                        onChange={() => handleRadioChange('option2')}
-                    />
-                    2pm
-                    <input
-                        type="radio"
-                        id="option3"
-                        value="option3"
-                        checked={selectedValue === 'option3'}
-                        onChange={() => handleRadioChange('option3')}
-                    />
-                    6pm
-                </form> */}
-
                 <h2>Please select a time for the dinning room:</h2>
                 <div className={styles.container}>
                     {dtimes.map((time) => (
@@ -96,24 +69,6 @@ const AvailableTimes = ()  =>  {
                         </button>
                     ))}
                 </div>
-                {/* <form>
-                    <input
-                        type="radio"
-                        id="option4"
-                        value="option4"
-                        checked={selectedValue === 'option4'}
-                        onChange={() => handleRadioChange('option4')}
-                    />
-                    10:30am
-                    <input
-                        type="radio"
-                        id="option5"
-                        value="option5"
-                        checked={selectedValue === 'option5'}
-                        onChange={() => handleRadioChange('option5')}
-                    />
-                    2:30pm
-                </form> */}
                 <button className={GlobalStyles.continueButton}type="button" onClick={() => navigate('/MealDeal')}>Continue</button>
             </div>
         </div>
