@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Calendar from 'react-calendar';
 import { useNavigate } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css';
-import GlobalStyles from '../Global.module.css'
+import GlobalStyles from '../Global.module.css';
+import styles from './AvailableTimes.module.css';
 
 
 const AvailableTimes = ()  =>  {
@@ -14,12 +15,21 @@ const AvailableTimes = ()  =>  {
     earliest.setDate(earliest.getDate() + numWeeks * 7);
     latest.setDate(latest.getDate() + numWeeks * 60);
   
-    //This is how the radio button is currently being selected
-    const [selectedValue, setSelectedValue] = useState('option1');
+    const [selectedPTime, setSelectedPTime] = useState(null);
+    const [selectedDTime, setSelectedDTime] = useState(null);
 
-    const handleRadioChange = (value) => {
-        setSelectedValue(value);
-    };    
+    const ptimes = ['10am', '2pm', '6pm'];
+    const dtimes = ['10:30am', '2:30pm'];
+
+    const handleSelectTime = (time, type) => {
+        if (type === "party") {
+            setSelectedPTime(time === selectedPTime ? null : time);
+        }
+        else {
+            setSelectedDTime(time === selectedDTime ? null : time);
+        }
+        console.log(time);
+    };
 
     return (
         <div className={GlobalStyles.setup}>
@@ -36,7 +46,18 @@ const AvailableTimes = ()  =>  {
                     activeStartDate={null}
                 />
                 <h2>Please select a time for the party room:</h2>
-                <form>
+                <div className={styles.container}>
+                    {ptimes.map((time) => (
+                        <button
+                            key={time}
+                            onClick={() => handleSelectTime(time, "party")}
+                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
+                        >
+                            {time}
+                        </button>
+                    ))}
+                </div>
+                {/* <form>
                     <input
                         type="radio"
                         id="option1"
@@ -61,10 +82,21 @@ const AvailableTimes = ()  =>  {
                         onChange={() => handleRadioChange('option3')}
                     />
                     6pm
-                </form>
+                </form> */}
 
                 <h2>Please select a time for the dinning room:</h2>
-                <form>
+                <div className={styles.container}>
+                    {dtimes.map((time) => (
+                        <button
+                            key={time}
+                            onClick={() => handleSelectTime(time, "dining")}
+                            className={selectedDTime === time ? styles.buttonSelected : styles.button}
+                        >
+                            {time}
+                        </button>
+                    ))}
+                </div>
+                {/* <form>
                     <input
                         type="radio"
                         id="option4"
@@ -81,8 +113,8 @@ const AvailableTimes = ()  =>  {
                         onChange={() => handleRadioChange('option5')}
                     />
                     2:30pm
-                </form>
-                <button className={GlobalStyles.button}type="button" onClick={() => navigate('/MealDeal')}>Continue</button>
+                </form> */}
+                <button className={GlobalStyles.continueButton}type="button" onClick={() => navigate('/MealDeal')}>Continue</button>
             </div>
         </div>
     );

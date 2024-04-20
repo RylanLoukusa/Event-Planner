@@ -51,7 +51,7 @@ const MealDealSelectionPage = () => {
           {addOnsExpanded ? 'Hide Add-Ons' : 'Show Add-Ons'}
         </button>
 
-        <button className={styles.continueButton} onClick={() => navigate('/Questionaire')}>Continue</button>
+        <button className={GlobalStyles.continueButton} onClick={() => navigate('/Questionaire')}>Continue</button>
       </div>
     </div>
   );
