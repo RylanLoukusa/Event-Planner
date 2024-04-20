@@ -23,7 +23,7 @@ const Home = () =>  {
             <h2 className={GlobalStyles.headerText}>Party Room</h2>
             <div >
               <ul className={styles.list}>
-                <li>5 minutes - Packages start at $210</li>
+                <li>Packages start at $210</li>
                 <li>1st Floor Party Room</li>
                 <li>Capacity: 15</li>
               </ul>
@@ -37,7 +37,7 @@ const Home = () =>  {
             <h2 className={GlobalStyles.headerText}>Dining Room</h2>
             <div>
               <ul className={styles.list}>
-                <li>5 minutes - Packages start at $210</li>
+                <li>Packages start at $210</li>
                 <li>2nd Floor Dining Room</li>
                 <li>Capacity: 25</li>
               </ul>
