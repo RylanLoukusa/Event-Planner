@@ -1,0 +1,19 @@
+.buttonNotSelected {
+    margin: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonSelected {
+    margin: 10px;
+    background-color:orange;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }

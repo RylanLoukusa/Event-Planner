@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-
 import { React, useState } from 'react';
 import GlobalStyles from '../Global.module.css';
+import styles from './Questionaire.module.css';
 
 // const seatingOptions = [
 //   { value: 'Front', label: 'Front two rows' },
@@ -50,7 +50,7 @@ const Questionaire = () => {
               <button
                   key={option}
                   onClick={() => handleSelect(option)}
-                  className={selectedOption === option ? GlobalStyles.buttonSelected : GlobalStyles.button}
+                  className={selectedOption === option ? styles.buttonSelected : styles.buttonNotSelected}
               >
                   {option}
               </button>
@@ -59,7 +59,7 @@ const Questionaire = () => {
         <label className={GlobalStyles.inputPrompt}>Any questions or concerns the Cinema should know about?</label>
         <input placeholder='Enter' className={GlobalStyles.input}/>
 
-        <button className={GlobalStyles.button} type='submit'>
+        <button className={GlobalStyles.continueButton} type='submit'>
           View Booking Summary
         </button>
         <p>Booking TIME on DATE</p>
