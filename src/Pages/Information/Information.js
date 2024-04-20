@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { React } from "react";
 import { Component } from 'react';
 import GlobalStyles from "../Global.module.css";
@@ -104,7 +103,7 @@ class Information extends Component{
                         <label className={GlobalStyles.inputPrompt}>Zip Code</label>
                         <input required placeholder="Enter" id="zip" className={GlobalStyles.input}/>
                     
-                    <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>Continue</button>
+                    <button className={GlobalStyles.continueButton} onClick={() => this.addCustomer()}>Continue</button>
                 </div>
             </div>   
         );

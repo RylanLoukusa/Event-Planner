@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 
-import { React } from 'react';
+import { React, useState } from 'react';
 import GlobalStyles from '../Global.module.css';
 
 
@@ -12,7 +12,16 @@ const seatingOptions = [
 ]
 
 const Questionaire = () => {
+
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleChange = (option) => {
+    setSelectedOption(option);
+    console.log("Selected option:", option);
+  };
   let navigate = useNavigate();
+
+  
   return (
     <div className={GlobalStyles.setup}>
       <form onSubmit={() => navigate('/Summary')} className={GlobalStyles.page}>
@@ -29,7 +38,7 @@ const Questionaire = () => {
         <label className={GlobalStyles.inputPrompt}>What movie would you like to see?</label>
         <input required placeholder='Enter' className={GlobalStyles.input}/>
         <label className={GlobalStyles.inputPrompt}>What is you seating preference?</label>
-        <Select options={seatingOptions} required/>
+        <Select options={seatingOptions} value={selectedOption} onChange={handleChange} required/>
         <label className={GlobalStyles.inputPrompt}>Any questions or concerns the Cinema should know about?</label>
         <input placeholder='Enter' className={GlobalStyles.input}/>
 

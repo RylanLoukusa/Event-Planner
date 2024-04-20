@@ -24,7 +24,6 @@ const Home = () =>  {
             <div >
               <ul className={styles.list}>
                 <li>5 minutes - Packages start at $210</li>
-                <li>St. Michael Cinema</li>
                 <li>1st Floor Party Room</li>
                 <li>Capacity: 15</li>
               </ul>
@@ -39,7 +38,6 @@ const Home = () =>  {
             <div>
               <ul className={styles.list}>
                 <li>5 minutes - Packages start at $210</li>
-                <li>St. Michael Cinema</li>
                 <li>2nd Floor Dining Room</li>
                 <li>Capacity: 25</li>
               </ul>

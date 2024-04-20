@@ -1,7 +1,6 @@
 import { React } from "react";
 import { Component } from 'react';
 import Select from 'react-select'
-import{useNavigate} from 'react-router-dom';
 import GlobalStyles from "../Global.module.css";
 
 class partyOptions {
@@ -98,7 +97,7 @@ class InformationSpecial extends Component{
         return (
 
             <div className={GlobalStyles.setup}>
-                <img src={'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w'}/>
+                <img src={'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w'} alt="logo" />
                 
             <div className={GlobalStyles.page}onSubmit = {() => this.goHome()}>
                 <h1 className={GlobalStyles.titleText}>Request a Special Event</h1><br />
@@ -123,7 +122,7 @@ class InformationSpecial extends Component{
                     <label className={GlobalStyles.inputPrompt}>What type of party do you want to request?</label>
                     <Select options={partyOptions} required className="select"/>
                         <br/>
-                        <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>Submit</button>
+                        <button className={GlobalStyles.continueButton} onClick={() => this.addCustomer()}>Submit</button>
             </div>
                 
             </div>
