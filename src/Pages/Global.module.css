@@ -1,71 +1,94 @@
 .setup {
-    background-color: white;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  .select{
-    width:200px;
-    padding:10px;
-    height:10px;
-  }
-  .page {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
-  }
-  .list{
-    list-style-type: none;
-    text-align: left;
-    padding:20px;
-  }
-  .titleText {
-    font-size: 40px;
-    padding-bottom: 10px;
-    color: grey;
-    text-align: center;
-  }
-  .button{
-    background-color: orange;
-    color: black;
-    text-align: center;
-    margin:20px;
-    border-radius: 4px;
-    padding:2px;
-  }
-  .selectionView {
-    border: 4px solid black;
-    padding: 5px;
-    padding-bottom: 10px;
-    margin: 10px;
-    text-align: center;
-  }
-  .headerText {
-    font-weight: bold;
-    font-size: 25px;
-    margin:15px;
-  }
-  .descriptionText{
-    font-size: 15;
-    margin:10px;
-    padding-left: 10px;
-  }
-  .specialButton {
-    text-align: center;
-    font-size: 15px;
-    margin: 20px;
-    background-color:white;
-  }
-  .inputPrompt {
-    color:orange;
-    padding:20px;
-  }
-  .input{
-    width: 300px;
-    margin:10px;
-    border:1px solid black;
-    padding:10px;
-  }
+  background-color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.select{
+  width:200px;
+  padding:10px;
+  height:10px;
+}
+.page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: min-content;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.titleText {
+  font-size: 40px;
+  padding-bottom: 0px;
+  margin-top: 20px;
+  color: grey;
+  text-align: center;
+}
+.button{
+  background-color: orange;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 10px;
+}
+.selectedButton{
+  background-color:black;
+  color:orange;
+  text-align:center;
+  margin:20px;
+  border-radius: 4px;
+  padding:5px;
+}
+.selectionView {
+  border: 4px solid black;
+  padding: 5px;
+  padding-bottom: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.headerText {
+  font-weight: bold;
+  font-size: 25px;
+  margin:15px;
+}
+.descriptionText{
+  font-size: 15;
+  margin:10px;
+  padding-left: 10px;
+}
+.backButton {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  margin-right: 600px;
+  border-radius: 4px;
+  background-color:lightgray;
+}
+.continueButton {
+  background-color: orange;
+  color: black;
+  text-align: center;
+  margin: 20px 0px;
+  border-radius: 4px;
+  padding: 10px;
+}
+.specialButton {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  margin-left: 600px;
+  border-radius: 4px;
+  background-color:lightgray;
+}
+.inputPrompt {
+  color:orange;
+  padding:20px;
+}
+.input{
+  width: 300px;
+  margin:10px;
+  border:1px solid black;
+  padding:10px;
+}

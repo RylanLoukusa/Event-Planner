@@ -36,6 +36,12 @@ class Information extends Component{
         var zip= ((document.getElementById("zip")||{}).value)||"";
         var phone= ((document.getElementById("pNum")||{}).value)||"";
 
+
+        if (fname == "" || lname == "" || email == "" || address == "" || city == "" || state == "" || zip == "" || phone == "")
+        {
+            alert("Must fill out all text boxes");
+            return;
+        }
         /*
         if(email != confirmEmail)
         {
@@ -54,6 +60,7 @@ class Information extends Component{
         data.append("state",state);
         data.append("zip",zip);
         data.append("phone",phone);
+        data.append("partyType", null);
 
         /*
         for (const value of data.values()) {

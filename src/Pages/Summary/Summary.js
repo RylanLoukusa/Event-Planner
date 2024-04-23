@@ -1,6 +1,8 @@
 import React from 'react';
+import { Component } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlobalStyles from '../Global.module.css';
+import styles from './Summary.module.css';
 
 //import ReactDOM from 'react-dom/client';
 
@@ -13,6 +15,8 @@ function WhichRoom(props) {
   if (whichPartyRoom === 'Dining Room') {
     return <h6>Dining Room</h6>;
   } else if (whichPartyRoom === 'Party Room') {
+    return <h6>Party Room</h6>;
+  } else {
     return <h6>Party Room</h6>;
   }
 }
@@ -38,35 +42,74 @@ function WhichAddOns(props) {
     return <h6>Pizza</h6>;
   } else if (whichAddOnChosen === 'Guests') {
     return <h6>Guests</h6>;
+  } else {
+    return <h6>Guests</h6>;
   }
 }
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<Greeting isLoggedIn={false} />);
 
-const Summary = () => {
-  let navigate = useNavigate();
-  return (
-    <div>
-      <button className={GlobalStyles.button} type="button" onClick={() => navigate('/MealDeal')}>Back</button>
-
-    <div>
-      <h1 className={GlobalStyles.titleText}>Booking summary</h1>
-      <h2 className={GlobalStyles.headerText}>
-        Party Room - <WhichRoom whichPartyRoom="Party Room" />
-      </h2>
-      <h2 className={GlobalStyles.headerText}>
-        Meal Deal - <WhichDeal whichMealDeal="Popcorn Extravaganza" />
-      </h2>
-      <h2 className={GlobalStyles.headerText}>
-        Addons - <WhichAddOns whichAddOnChosen="Pizza" />
-      </h2>
-      <h2 className={GlobalStyles.headerText}>Date -</h2>
-      <button className={GlobalStyles.button} type="button" onClick={() => navigate('/Contract')}>Continue</button>
-    </div>
-      
-    </div>
-  );
+class Summary extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+    Generic_party:[]
+    }
 }
 
+//5038 is other url
+API_URL="http://localhost:5092/";
+
+componentDidMount(){
+    this.refreshGenericParty();
+}
+
+async refreshGenericParty(){
+    fetch(this.API_URL+"api/Web/GetGenericParty").then(response=>response.json())
+    .then(data=>{
+    this.setState({Generic_party:data});
+    })
+}
+async goQuestionaire(){
+  window.location.href = "/Questionaire"
+}
+async goContract(){
+  window.location.href = "/Contract"
+}
+async goHome(){
+    window.location.href = "/"
+}
+  render(){
+    const{Generic_party}=this.state;
+    //let navigate = useNavigate();
+    return (
+      <div className={GlobalStyles.setup}>
+        <div className={GlobalStyles.page}>
+          <button className={GlobalStyles.backButton} type="button" onClick={() => this.goQuestionaire()}>Back</button>
+          <div className={styles.container}>
+              <h1 className={GlobalStyles.titleText}>Booking Summary</h1>
+              <h2 className={GlobalStyles.headerText}> Party Room: </h2>
+              {Generic_party.map(Generic_party=>
+                  <WhichRoom whichPartyRoom={Generic_party.Room} />
+              )}
+              <h2 className={GlobalStyles.headerText}> Meal Deal: </h2>
+              {Generic_party.map(Generic_party=>
+                  <WhichDeal whichMealDeal={Generic_party.Deal_name} />
+              )}
+              <h2 className={GlobalStyles.headerText}>Addons: </h2>
+              {Generic_party.map(Generic_party=>
+                  <WhichAddOns whichAddOnChosen={Generic_party.Room} />
+              )}
+              <h2 className={GlobalStyles.headerText}>Date:</h2>
+              {Generic_party.map(Generic_party=>
+                  <h6>{Generic_party.date}</h6>
+              )}
+              <button className={GlobalStyles.button} type="button" onClick={() => this.goContract()}>Continue</button>
+            </div>
+        </div> 
+      </div>
+    );
+  };
+}
 export default Summary;
