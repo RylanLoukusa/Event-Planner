@@ -1,0 +1,14 @@
+.logo {
+    width: 380px;
+    height: 190px;
+    margin-top: -30px;
+}
+.list{
+    list-style-type: none;
+    text-align: center;
+    padding:20px;
+  }
+
+li {
+    padding: 5px
+}

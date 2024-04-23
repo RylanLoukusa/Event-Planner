@@ -26,6 +26,7 @@ const MealDealSelectionPage = () => {
   return (
     <div className={GlobalStyles.setup}>
       <div className={GlobalStyles.page}>
+        <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/AvailableTimes')}>Back</button>
         <h2 className={GlobalStyles.titleText}>Meal Deal</h2>
         <MealDeal/>
         <DrinkDeal/>
@@ -50,7 +51,7 @@ const MealDealSelectionPage = () => {
           {addOnsExpanded ? 'Hide Add-Ons' : 'Show Add-Ons'}
         </button>
 
-        <button className={styles.continueButton} onClick={() => navigate('/Questionaire')}>Continue</button>
+        <button className={GlobalStyles.continueButton} onClick={() => navigate('/Questionaire')}>Continue</button>
       </div>
     </div>
   );

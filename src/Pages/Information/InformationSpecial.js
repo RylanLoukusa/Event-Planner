@@ -1,20 +1,17 @@
-import { React } from "react";
+import  React, { useState } from "react";
 import { Component } from 'react';
 import Select from 'react-select'
 import{useNavigate} from 'react-router-dom';
 import GlobalStyles from "../Global.module.css";
+import { options } from "@fullcalendar/core/preact.js";
 
-class partyOptions {
-    constructor(value, label){
-        this.value = value;
-        this.label = label;
-    }
-}
-partyOptions = [
-    { value: 'Third Floor Event', label: 'Third Floor' },
-    { value: 'Field Trip', label: 'Field Trip' },
-    { value: 'Rent an Auditorium', label: 'Auditorium' }
+
+const partyOptions = [
+    { label: 'Third Floor', value: 'Third Floor Event' },
+    { label: 'Field Trip', value: 'Field Trip' },
+    { label: 'Auditorium', value: 'Rent an Auditorium' }
 ]
+
 
 class InformationSpecial extends Component{
     constructor(props){
@@ -48,7 +45,14 @@ class InformationSpecial extends Component{
         var state= ((document.getElementById("state")||{}).value)||"";
         var zip= ((document.getElementById("zip")||{}).value)||"";
         var phone= ((document.getElementById("pNum")||{}).value)||"";
+        var partyType= ((document.getElementById("partyType")||{}).value)||"";
 
+
+        if (fname == "" || lname == "" || email == "" || address == "" || city == "" || state == "" || zip == "" || phone == "")
+        {
+            alert("Must fill out all text boxes");
+            return;
+        }
         /*
         if(email != confirmEmail)
         {
@@ -56,7 +60,6 @@ class InformationSpecial extends Component{
             return 0;
         }
         */
-
 
         const data=new FormData();
         data.append("fname",fname);
@@ -67,6 +70,7 @@ class InformationSpecial extends Component{
         data.append("state",state);
         data.append("zip",zip);
         data.append("phone",phone);
+        data.append("partyType",'Field Trip');
 
         /*
         for (const value of data.values()) {
@@ -91,6 +95,13 @@ class InformationSpecial extends Component{
         window.location.href = "/"
     }
 
+    // const [selectedValue, setSelectedValue] = useState('');
+
+    // handleChange = (event) => {
+    //     setSelectedValue(event.target.value);
+    // };
+
+
     render(){
         const{customers}=this.state;
         //let navigate = useNavigate();
@@ -104,7 +115,7 @@ class InformationSpecial extends Component{
                 <h1 className={GlobalStyles.titleText}>Request a Special Event</h1><br />
 
                 <label className={GlobalStyles.inputPrompt}>First Name</label>
-                    <input required placeholder="Enter" id="fname" className={GlobalStyles.input}/>
+                    <input required="true" placeholder="Enter" id="fname" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>Last Name</label>
                     <input required placeholder="Enter" id="lname" className={GlobalStyles.input}/>
                     <label className={GlobalStyles.inputPrompt}>Email</label>
@@ -119,7 +130,7 @@ class InformationSpecial extends Component{
                     <input required placeholder="Enter" id="zip" className={GlobalStyles.input}/>
                     
                     <label className={GlobalStyles.inputPrompt}>What type of party do you want to request?</label>
-                    <Select options={partyOptions} required className="select"/>
+                    <Select id="partyType" value={options.value} options={partyOptions} required className="select"/>                        
                         <br/>
                         <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>submit</button>
             </div>

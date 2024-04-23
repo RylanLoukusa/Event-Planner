@@ -1,0 +1,16 @@
+.signature {
+    border:2px solid black;
+    width: 90%;
+    height: 200px;
+    margin: 20px;
+    align-content: center;
+}
+
+.clearButton {
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 430px;
+    border-radius: 4px;
+    background-color:lightgray;
+}

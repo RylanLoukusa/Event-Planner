@@ -23,18 +23,19 @@ const DrinkDeal = () => {
         <div className={styles.title}>
             <h2>Select Two Drinks</h2>
         </div>
-        {drinks.map((drink) => (
-            <button
-                key={drink}
-                onClick={() => handleSelectDrink(drink)}
-                className={selectedDrinks.includes(drink) ? styles.buttonSelected : styles.button}
-            >
-                {drink}
-            </button>
-        ))}
+        <div className={styles.drinkContainer}>
+          {drinks.map((drink) => (
+              <button
+                  key={drink}
+                  onClick={() => handleSelectDrink(drink)}
+                  className={selectedDrinks.includes(drink) ? styles.buttonSelected : styles.button}
+              >
+                  {drink}
+              </button>
+          ))}
+        </div>
     </div>
   );
 };
 
 export default DrinkDeal;
-

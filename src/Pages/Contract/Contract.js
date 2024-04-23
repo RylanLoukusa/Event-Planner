@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import { useNavigate } from "react-router-dom";
 import GlobalStyles from '../Global.module.css';
-import './Contract.css'
+import styles from './Contract.module.css'
 
 const Contract = ()  =>  {
   let navigate = useNavigate();
@@ -22,8 +22,10 @@ const Contract = ()  =>  {
   }, [signature]);
 
   return (
-     <div>
-        <button className={GlobalStyles.button}type="button" onClick={() => navigate('/Summary')}>Back</button>
+     <div className={GlobalStyles.setup}>
+        <div className={GlobalStyles.page}>
+          <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/Summary')}>Back</button>
+          <h1 className={GlobalStyles.titleText}>Contract</h1>
 
     <h2 className = {GlobalStyles.headerText}>
       Timing of Event
@@ -56,13 +58,14 @@ const Contract = ()  =>  {
     <hr/>
     <label className={GlobalStyles.descriptionText}>By signing below you acknowledge and accept the terms and regulations of the St. Michael Cinema</label>
     <SignatureCanvas 
-      canvasProps= {{className:"signature"}}
+      canvasProps= {{className: styles.signature }}
       ref={sigRef}
       onEnd={handleSignatureEnd}
     />
-    <button className={GlobalStyles.specialButton} onClick={clearSignature}>Clear</button>
+    <button className={styles.clearButton} onClick={clearSignature}>Clear</button>
     
       <button className={GlobalStyles.button}type="button" onClick={() => navigate('/Payment')}>Continue</button>
+      </div>
   </div>
   );
 }
