@@ -17,10 +17,7 @@ const Welcome = () => {
                 Welcome to Saint Michael Cinema Event Booking
             </h1>
             <br/>
-            <h2>Admin Controls</h2>
-            <button className={GlobalStyles.button}>
-                Login as Admin
-            </button>
+            
             <h2>Returning User</h2>
             <button className={GlobalStyles.button}>
                 Login
@@ -28,6 +25,10 @@ const Welcome = () => {
             <h2>New User? Create an account here: </h2>
             <button className={GlobalStyles.button} onClick={() => navigate('/Information')}>
                 Register
+            </button>
+            <h2>Admin Controls</h2>
+            <button className={GlobalStyles.button} onClick={() => navigate('/AdminVerify')}>
+                Login as Admin
             </button>
         </div> 
         </div>

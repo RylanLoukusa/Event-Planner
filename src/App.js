@@ -13,9 +13,9 @@ import Payment from "./Pages/Payment/Payment.js";
 import Questionaire from "./Pages/Questionaire/Questionaire.js";
 import Summary from "./Pages/Summary/Summary.js";
 import AvailableTimes from "./Pages/AvailableTimes/AvailableTimes.js";
-import AuditoriumQuestions from "./Pages/Admin/AuditoriumQuestions.js";
-import FieldTripQuestions from "./Pages/Admin/FieldTripQuestions.js";
-import ThirdFloorQuestions from "./Pages/Admin/ThirdFloorQuestions.js";
+// import AuditoriumQuestions from "./Pages/Admin/AuditoriumQuestions.js";
+// import FieldTripQuestions from "./Pages/Admin/FieldTripQuestions.js";
+// import ThirdFloorQuestions from "./Pages/Admin/ThirdFloorQuestions.js";
 import AdminVerify from "./Pages/Admin/AdminVerify.js";
 import AdminView from "./Pages/Admin/AdminView.js";
 import AddHost from "./Pages/Admin/AddHostDialog.js"
@@ -32,9 +32,9 @@ function App() {
                 <Route path="/AdminView" element={<AdminView />} />
                 <Route path="/AddHost" element={<AddHost />} />
                 <Route path="/Payment" element={<Payment />} />
-                <Route path="/AuditoriumQuestions" element={<AuditoriumQuestions />} />
+                {/* <Route path="/AuditoriumQuestions" element={<AuditoriumQuestions />} />
                 <Route path="/ThirdFloorQuestions" element={<ThirdFloorQuestions />} />
-                <Route path="/FieldTripQuestions" element={<FieldTripQuestions />} />
+                <Route path="/FieldTripQuestions" element={<FieldTripQuestions />} /> */}
                 <Route path="/Summary" element={<Summary />} />
                 <Route path="/AvailableTimes" element={<AvailableTimes />} />
                 <Route path="/Questionaire" element={<Questionaire />} />
