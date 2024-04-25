@@ -33,7 +33,7 @@ const Questionaire = () => {
       <form onSubmit={() => navigate('/Summary')} className={GlobalStyles.page}>
         <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/MealDeal')}>Back</button>
         <h1 className={GlobalStyles.titleText}>Questionnaire</h1>
-        <label className={GlobalStyles.inputPrompt}>What is your birthday child's name and age? </label>
+        <label className={GlobalStyles.inputPrompt}>What is your birthday child's name? </label>
         <input required placeholder='Enter' className={GlobalStyles.input}/>
         <label className={GlobalStyles.inputPrompt}>How old is the birthday child?</label>
         <input required placeholder='Enter' className={GlobalStyles.input}/>

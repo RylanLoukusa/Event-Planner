@@ -4,7 +4,6 @@ import GlobalStyles from "../Global.module.css";
 import ThirdFloorQuestions from '../Admin/ThirdFloorQuestions';
 import FieldTripQuestions from '../Admin/FieldTripQuestions';
 import AuditoriumQuestions from '../Admin/AuditoriumQuestions';
-import logo from '../Welcome.js';
 
 const SpecialRequest = () => {
     return(

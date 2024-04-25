@@ -30,7 +30,7 @@ const Home = () =>  {
                 <li>Capacity: 25</li>
               </ul>
             </div>
-            <button className={GlobalStyles.button} onClick={() => navigate('/AdminView')}>
+            <button className={GlobalStyles.button} onClick={() => navigate('/AvailableTimes')}>
             Proceed to Booking 
           </button>
           

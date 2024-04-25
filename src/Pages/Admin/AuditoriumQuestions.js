@@ -8,6 +8,7 @@ import './Dialog.css';
 const AuditoriumQuestions = () => {
 
   const [selectedmovieOption, setSelectedMovieOption] = useState(null);
+  
   const movieOptions = ['Movie playing in the Theater', 'Bringing personal movie'];
   const seatingOptions = [{label:'Front two Rows'},{label:'Middle of the Auditorium'}, {label:'Back two rows'}];
   const formatOptions = [{label:'DVD'}, {label:'Blu-Ray'},{label:'Laptop'} ];

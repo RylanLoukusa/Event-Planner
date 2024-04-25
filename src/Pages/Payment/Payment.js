@@ -30,10 +30,8 @@ const Payment = () => {
         <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/Contract')}>Back</button>
         <h1 className={GlobalStyles.titleText}>Payment</h1>
         <div style={{ overflowY: 'scroll' }}>
-          <p className={styles.paymentInfo}>
-            PAYMENT {'\n'}
-            'room selection' {'\n'}
-            'meal deal selection with any add-ons selected'
+          <p className={GlobalStyles.descriptionText}>
+            Please Select a tip amount:
           </p>
           <div>
             <button onClick={onNoTipPress} className={GlobalStyles.button}>No TIP</button>
@@ -43,7 +41,7 @@ const Payment = () => {
             <button onClick={customTip} className={GlobalStyles.button}>Custom TIP</button>
           </div>
           <p className={styles.paymentDue}>Payment due today</p>
-          <p className={styles.remainingBalance}>You have a remaining balance of ___ due by your booking date. You will receive an email when your payment is due.</p>
+          {/* <p className={styles.remainingBalance}>You have a remaining balance of ___ due by your booking date. You will receive an email when your payment is due.</p> */}
         </div>
         <Checkout />
         <button className={GlobalStyles.button}type="button" onClick={() => navigate('/Confirmation')}>Continue</button>

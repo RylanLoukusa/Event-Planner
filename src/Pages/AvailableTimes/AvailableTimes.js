@@ -17,10 +17,20 @@ const AvailableTimes = ()  =>  {
   
     const [selectedPTime, setSelectedPTime] = useState(null);
     const [selectedDTime, setSelectedDTime] = useState(null);
+    const [selectedRoom, setSelectedRoom] = useState(null);
 
     const ptimes = ['10am', '2pm', '6pm'];
     const dtimes = ['10:30am', '2:30pm'];
+    const roomOption = ['Dining Room', 'Party Room'];
 
+
+    const handleSelectedRoom = (room) => {
+        if(selectedRoom === room){
+            setSelectedRoom(null);
+        }else{
+            setSelectedRoom(room);
+        }
+    }
     const handleSelectTime = (time, type) => {
         if (type === "party") {
             setSelectedPTime(time === selectedPTime ? null : time);
@@ -45,19 +55,24 @@ const AvailableTimes = ()  =>  {
                     maxDate={latest}
                     activeStartDate={null}
                 />
-                <h2>Please select a time for the party room:</h2>
-                <div className={styles.container}>
-                    {ptimes.map((time) => (
-                        <button
-                            key={time}
-                            onClick={() => handleSelectTime(time, "party")}
-                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
-                        >
-                            {time}
-                        </button>
-                    ))}
-                </div>
-                <h2>Please select a time for the dinning room:</h2>
+                
+                {roomOption.map((room) => (
+                    <div>
+                     <button
+                     key={room}
+                     onClick={() => handleSelectedRoom(room)}
+                     className={selectedRoom === room ? GlobalStyles.selectedButton : GlobalStyles.button}
+                   >
+                     {room}
+                   </button>
+                   </div>
+                ))}
+                
+                {selectedRoom && (
+        <div >
+          {selectedRoom === 'Dining Room' && (
+            <div className={GlobalStyles.selectionView}>
+             <h2>Please select a time for the dinning room:</h2>
                 <div className={styles.container}>
                     {dtimes.map((time) => (
                         <button
@@ -69,6 +84,29 @@ const AvailableTimes = ()  =>  {
                         </button>
                     ))}
                 </div>
+            </div>
+          )}
+          
+          {selectedRoom === 'Party Room' && (
+            <div className={GlobalStyles.selectionView}>
+             <h2>Please select a time for the party room:</h2>
+                <div className={styles.container}>
+                    {ptimes.map((time) => (
+                        <button
+                            key={time}
+                            onClick={() => handleSelectTime(time, "party")}
+                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
+                        >
+                            {time}
+                        </button>
+                    ))}
+                </div>
+            </div>
+          )}
+          </div>
+        )}
+                
+                
                 <button className={GlobalStyles.continueButton}type="button" onClick={() => navigate('/MealDeal')}>Continue</button>
             </div>
         </div>
