@@ -37,7 +37,7 @@ const AdminView = () => {
           <p>list of the events already past</p>
           <p>select party details where the date is less than today </p>
         </TabPanel>
-        <TabPanel>
+        {/* <TabPanel>
        <div className='setup'>
             <h1 className='title-text'>What kind of booking do you require?</h1>
             <div className='selection-view'>
@@ -51,7 +51,7 @@ const AdminView = () => {
               <FieldTripQuestions/>
             </div>
           </div> 
-        </TabPanel>
+        </TabPanel> */}
       </Tabs>
       
     </div>

@@ -34,6 +34,8 @@ class Information extends Component{
         var state= ((document.getElementById("state")||{}).value)||"";
         var zip= ((document.getElementById("zip")||{}).value)||"";
         var phone= ((document.getElementById("pNum")||{}).value)||"";
+        var username=((document.getElementById("username")||{}).value)||"";
+        var password=((document.getElementById("password")||{}).value)||"";
 
         /*
         if(email != confirmEmail)
@@ -53,6 +55,8 @@ class Information extends Component{
         data.append("state",state);
         data.append("zip",zip);
         data.append("phone",phone);
+        data.append("username", username);
+        data.append("password", password);
 
         /*
         for (const value of data.values()) {
@@ -70,7 +74,7 @@ class Information extends Component{
             this.refreshCustomers();
         })
 
-        window.location.href = "/AvailableTimes"
+        window.location.href = "/Home"
         //this.props.navigate('/Date');
     }
     async goHome(){
@@ -102,7 +106,10 @@ class Information extends Component{
                         <input required placeholder="Enter" id="state" className={GlobalStyles.input}/>
                         <label className={GlobalStyles.inputPrompt}>Zip Code</label>
                         <input required placeholder="Enter" id="zip" className={GlobalStyles.input}/>
-                    
+                        <label className={GlobalStyles.inputPrompt}>Username</label>
+                        <input required placeholder="Enter" id="username" className={GlobalStyles.input}/>
+                        <label className={GlobalStyles.inputPrompt}>Password</label>
+                        <input required placeholder="Enter" id="password" className={GlobalStyles.input}/>
                     <button className={GlobalStyles.continueButton} onClick={() => this.addCustomer()}>Continue</button>
                 </div>
             </div>   
