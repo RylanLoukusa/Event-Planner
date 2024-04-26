@@ -10,7 +10,6 @@ const SpecialRequest = () => {
     <div className={GlobalStyles.setup}>
         <div className={GlobalStyles.page}>
             <h1 className={GlobalStyles.titleText}>Which booking do you require?</h1>
-            <div className={GlobalStyles.selectionView}>
               <h2 className={GlobalStyles.headerText}>Auditorium Rental</h2>
               <AuditoriumQuestions/>
 
@@ -19,7 +18,6 @@ const SpecialRequest = () => {
 
               <h2 className={GlobalStyles.headerText}>Field Trip</h2>
               <FieldTripQuestions/>
-            </div>
           </div> 
     </div>
         

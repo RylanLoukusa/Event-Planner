@@ -44,7 +44,7 @@ const AvailableTimes = ()  =>  {
     return (
         <div className={GlobalStyles.setup}>
             <div className={GlobalStyles.page}>
-                <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/Information')}>Back</button>
+                <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/Home')}>Back</button>
                 <h1 className={GlobalStyles.titleText}>Date Selection</h1>
                 <h2>Please select a date:</h2>
                 <Calendar
@@ -71,7 +71,7 @@ const AvailableTimes = ()  =>  {
                 {selectedRoom && (
         <div >
           {selectedRoom === 'Dining Room' && (
-            <div className={GlobalStyles.selectionView}>
+            <div className={GlobalStyles.setup}>
              <h2>Please select a time for the dinning room:</h2>
                 <div className={styles.container}>
                     {dtimes.map((time) => (
@@ -88,7 +88,7 @@ const AvailableTimes = ()  =>  {
           )}
           
           {selectedRoom === 'Party Room' && (
-            <div className={GlobalStyles.selectionView}>
+            <div className={GlobalStyles.setup}>
              <h2>Please select a time for the party room:</h2>
                 <div className={styles.container}>
                     {ptimes.map((time) => (

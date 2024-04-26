@@ -27,7 +27,7 @@ const AuditoriumQuestions = () => {
       <button className={"Button orange"}>Book Now</button>
     </Dialog.Trigger>
     <Dialog.Portal>
-      <Dialog.Overlay className="DialogOverlay" />
+      {/* <Dialog.Overlay className="DialogOverlay" /> */}
       <Dialog.Content className="DialogContent">
         <Dialog.Title className="DialogTitle">Auditorium Rental</Dialog.Title>
         <Dialog.Description className="DialogDescription">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlobalStyles from './Global.module.css';
+import Login from './Information/Login'
 
 //image logo
 const logo = 'https://images.squarespace-cdn.com/content/v1/5de7be825321a1256af4048a/1665833573454-FPP4JCI5QMBVAJU0MTTI/st-michael-cinema.jpg?format=500w';
@@ -19,9 +20,7 @@ const Welcome = () => {
             <br/>
             
             <h2>Returning User</h2>
-            <button className={GlobalStyles.button}>
-                Login
-            </button>
+                <Login/>
             <h2>New User? Create an account here: </h2>
             <button className={GlobalStyles.button} onClick={() => navigate('/Information')}>
                 Register
