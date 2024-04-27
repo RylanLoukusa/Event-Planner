@@ -17,7 +17,9 @@ const AvailableTimes = ()  =>  {
   
     const [selectedPTime, setSelectedPTime] = useState(null);
     const [selectedDTime, setSelectedDTime] = useState(null);
+    const [selectedRoom, setSelectedRoom] = useState(null);
 
+    const roomTypes = ['Dining', 'Party'];
     const ptimes = ['10am', '2pm', '6pm'];
     const dtimes = ['10:30am', '2:30pm'];
 
@@ -29,6 +31,13 @@ const AvailableTimes = ()  =>  {
             setSelectedDTime(time === selectedDTime ? null : time);
         }
         console.log(time);
+    };
+    const handleSelectedRoom = (room) => {
+        if (selectedRoom === room){
+            setSelectedRoom(null);
+        }else{
+            setSelectedRoom(room);
+        }
     };
 
     return (
@@ -45,7 +54,56 @@ const AvailableTimes = ()  =>  {
                     maxDate={latest}
                     activeStartDate={null}
                 />
-                <h2>Please select a time for the party room:</h2>
+
+                <h2>Please choose a party room:</h2>
+                <div className={styles.container}>
+                    {roomTypes.map((room) => (
+                        <button
+                            key={room}
+                            onClick={() => handleSelectedRoom(room)}
+                            className={selectedRoom === room ? styles.buttonSelected : styles.button}
+                        >   
+                            {room}
+                        </button>
+                    ))}
+                </div>
+                {selectedRoom &&(
+                    <div>
+                        {selectedRoom === 'Dining' && (
+                            <div>
+                           <h2>Please select a time for the dinning room:</h2>
+                           <div className={styles.container}>
+                               {dtimes.map((time) => (
+                                   <button
+                                       key={time}
+                                       onClick={() => handleSelectTime(time, "dining")}
+                                       className={selectedDTime === time ? styles.buttonSelected : styles.button}
+                                   >
+                                       {time}
+                                   </button>
+                               ))}
+                           </div> 
+                           </div>
+                        )}
+                        {selectedRoom === 'Party' && (
+                            <div>
+                                <h2>Please select a time for the party room:</h2>
+                                 <div className={styles.container}>
+                                    {ptimes.map((time) => (
+                                        <button
+                                            key={time}
+                                            onClick={() => handleSelectTime(time, "party")}
+                                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
+                                        >
+                                            {time}
+                                        </button>
+                    ))}
+                </div>
+                            </div>
+                        )}
+                    </div>
+                )}
+                {/* <h2>Please select a time for the party room:</h2>
                 <div className={styles.container}>
                     {ptimes.map((time) => (
                         <button
@@ -56,7 +114,7 @@ const AvailableTimes = ()  =>  {
                             {time}
                         </button>
                     ))}
-                </div>
+                </div> */}
                 {/* <form>
                     <input
                         type="radio"
@@ -84,7 +142,7 @@ const AvailableTimes = ()  =>  {
                     6pm
                 </form> */}
 
-                <h2>Please select a time for the dinning room:</h2>
+                {/* <h2>Please select a time for the dinning room:</h2>
                 <div className={styles.container}>
                     {dtimes.map((time) => (
                         <button
@@ -95,7 +153,7 @@ const AvailableTimes = ()  =>  {
                             {time}
                         </button>
                     ))}
-                </div>
+                </div> */}
                 {/* <form>
                     <input
                         type="radio"

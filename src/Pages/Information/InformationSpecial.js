@@ -88,7 +88,7 @@ class InformationSpecial extends Component{
             this.refreshCustomers();
         })
 
-        window.location.href = "/AvailableTimes"
+        window.location.href = "/"
         //this.props.navigate('/Date');
     }
     async goHome(){

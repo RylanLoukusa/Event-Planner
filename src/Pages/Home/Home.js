@@ -28,14 +28,7 @@ const Home = () =>  {
                 <li>1st Floor Party Room</li>
                 <li>Capacity: 15</li>
               </ul>
-            </div>
-
-            <button className={GlobalStyles.button} onClick={() => navigate('/Information')}>
-              Book
-            </button>
-          </div>
-          <div className={GlobalStyles.selectionView}>
-            <h2 className={GlobalStyles.headerText}>Dining Room</h2>
+              <h2 className={GlobalStyles.headerText}>Dining Room</h2>
             <div>
               <ul className={styles.list}>
                 <li>5 minutes - Packages start at $210</li>
@@ -44,10 +37,11 @@ const Home = () =>  {
                 <li>Capacity: 25</li>
               </ul>
             </div>
+            </div>
 
             <button className={GlobalStyles.button} onClick={() => navigate('/Information')}>
               Book
-            </button>
+            </button> 
           </div>
           
         </div>
