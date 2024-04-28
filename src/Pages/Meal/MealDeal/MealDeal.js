@@ -5,7 +5,7 @@ import styles from './MealDeal.module.css';  // Ensure the path is correct based
 const MealDeal = () => {
   const [selectedMealDeal, setSelectedMealDeal] = useState(null);
   const [details, setDetails] = useState({
-    'Popcorn Extravaganza': 12,
+    'Popcorn Extravaganza': 0,
     'Pepperoni': 0,
     'Sausage': 0,
     'Cheese': 0,

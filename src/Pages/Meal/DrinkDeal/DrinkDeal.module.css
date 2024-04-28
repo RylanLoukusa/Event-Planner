@@ -1,47 +1,51 @@
 /* DrinkDeal.module.css */
 .container {
-  margin: 20px;
-  padding: 20px;
-  height: fit-content;
-}
+    margin: 20px;
+    padding: 20px;
+    height: fit-content;
+  }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: lightgray;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonSelected {
+    margin: 10px;
+    background-color:orange;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
 
-.label {
-  display: block;
-  margin: 10px 0;
-  cursor: pointer;
-  font-size: 16px;
-}
+  .drinkContainer {
+    width: 350px;
+  }
 
-input[type="checkbox"] {
-  margin-right: 10px;
-}
 
-.button {
-  padding: 8px 16px;
-  margin: 5px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: lightgray;
-  transition: background-color 0.3s;
-}
-
-.buttonSelected {
-  margin: 10px;
-  background-color:orange;
-  cursor: pointer;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.drinkContainer {
-  width: 350px;
-}
+  
+  

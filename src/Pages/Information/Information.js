@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { React } from "react";
 import { Component } from 'react';
 import GlobalStyles from "../Global.module.css";
@@ -35,13 +34,9 @@ class Information extends Component{
         var state= ((document.getElementById("state")||{}).value)||"";
         var zip= ((document.getElementById("zip")||{}).value)||"";
         var phone= ((document.getElementById("pNum")||{}).value)||"";
+        var username=((document.getElementById("username")||{}).value)||"";
+        var password=((document.getElementById("password")||{}).value)||"";
 
-
-        if (fname == "" || lname == "" || email == "" || address == "" || city == "" || state == "" || zip == "" || phone == "")
-        {
-            alert("Must fill out all text boxes");
-            return;
-        }
         /*
         if(email != confirmEmail)
         {
@@ -60,7 +55,8 @@ class Information extends Component{
         data.append("state",state);
         data.append("zip",zip);
         data.append("phone",phone);
-        data.append("partyType", null);
+        data.append("username", username);
+        data.append("password", password);
 
         /*
         for (const value of data.values()) {
@@ -78,7 +74,7 @@ class Information extends Component{
             this.refreshCustomers();
         })
 
-        window.location.href = "/AvailableTimes"
+        window.location.href = "/Home"
         //this.props.navigate('/Date');
     }
     async goHome(){
@@ -89,11 +85,9 @@ class Information extends Component{
         const{customers}=this.state;
         //let navigate = useNavigate();
         return (
-            <div>
-                <button className={GlobalStyles.button} type="button" onClick={() => this.goHome()}>Back</button>
             <div className={GlobalStyles.setup}>
-                
                 <div className={GlobalStyles.page}>
+                    <button className={GlobalStyles.backButton} type="button" onClick={() => this.goHome()}>Back</button>
                     <h1 className={GlobalStyles.titleText}>YOUR INFORMATION</h1><br />
 
                     <label className={GlobalStyles.inputPrompt}>First Name</label>
@@ -112,13 +106,13 @@ class Information extends Component{
                         <input required placeholder="Enter" id="state" className={GlobalStyles.input}/>
                         <label className={GlobalStyles.inputPrompt}>Zip Code</label>
                         <input required placeholder="Enter" id="zip" className={GlobalStyles.input}/>
-                    
-                    <button className={GlobalStyles.button} onClick={() => this.addCustomer()}>Continue</button>
-
-                    <button className={GlobalStyles.specialButton} onClick={()=>this.goHome()}>Change or Cancel</button>
+                        <label className={GlobalStyles.inputPrompt}>Username</label>
+                        <input required placeholder="Enter" id="username" className={GlobalStyles.input}/>
+                        <label className={GlobalStyles.inputPrompt}>Password</label>
+                        <input required placeholder="Enter" id="password" className={GlobalStyles.input}/>
+                    <button className={GlobalStyles.continueButton} onClick={() => this.addCustomer()}>Continue</button>
                 </div>
-            </div>
-        </div>    
+            </div>   
         );
     }
 }

@@ -89,7 +89,7 @@ async goHome(){
           <button className="Button orange">Book Now</button>
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Overlay className="DialogOverlay" />
+          {/* <Dialog.Overlay className="DialogOverlay" /> */}
           <Dialog.Content className="DialogContent">
             <Dialog.Title className="DialogTitle">Third Floor Event</Dialog.Title>
             <Dialog.Description className="DialogDescription">

@@ -66,11 +66,11 @@ class Payment extends Component{
             <button className={GlobalStyles.backButton}type="button" onClick={() => this.goContract()}>Back</button>
             <h1 className={GlobalStyles.titleText}>Payment</h1>
             <div style={{ overflowY: 'scroll' }}>
-              {/* <p className={styles.paymentInfo}>
+              <p className={styles.paymentInfo}>
                 PAYMENT {'\n'}
                 'room selection' {'\n'}
                 'meal deal selection with any add-ons selected'
-              </p> */}
+              </p>
               <div>
                 <button onClick={onNoTipPress} className={GlobalStyles.button}>No TIP</button>
                 <button onClick={_5percentPress} className={GlobalStyles.button}>5%</button>
@@ -82,7 +82,7 @@ class Payment extends Component{
               {Generic_party.map(Generic_party=>
                   <b>${Generic_party.price}</b>
               )}</p>
-              {/* <p className={styles.remainingBalance}>You have a remaining balance of ___ due by your booking date. You will receive an email when your payment is due.</p> */}
+              <p className={styles.remainingBalance}>You have a remaining balance of ___ due by your booking date. You will receive an email when your payment is due.</p>
             </div>
             <Checkout />
             <button className={GlobalStyles.button}type="button" onClick={() => this.goConfirmation()}>Continue</button>

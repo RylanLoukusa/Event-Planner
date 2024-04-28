@@ -19,10 +19,18 @@ const AvailableTimes = ()  =>  {
     const [selectedDTime, setSelectedDTime] = useState(null);
     const [selectedRoom, setSelectedRoom] = useState(null);
 
-    const roomTypes = ['Dining', 'Party'];
     const ptimes = ['10am', '2pm', '6pm'];
     const dtimes = ['10:30am', '2:30pm'];
+    const roomOption = ['Dining Room', 'Party Room'];
 
+
+    const handleSelectedRoom = (room) => {
+        if(selectedRoom === room){
+            setSelectedRoom(null);
+        }else{
+            setSelectedRoom(room);
+        }
+    }
     const handleSelectTime = (time, type) => {
         if (type === "party") {
             setSelectedPTime(time === selectedPTime ? null : time);
@@ -32,18 +40,11 @@ const AvailableTimes = ()  =>  {
         }
         console.log(time);
     };
-    const handleSelectedRoom = (room) => {
-        if (selectedRoom === room){
-            setSelectedRoom(null);
-        }else{
-            setSelectedRoom(room);
-        }
-    };
 
     return (
         <div className={GlobalStyles.setup}>
             <div className={GlobalStyles.page}>
-                <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/Information')}>Back</button>
+                <button className={GlobalStyles.backButton}type="button" onClick={() => navigate('/Home')}>Back</button>
                 <h1 className={GlobalStyles.titleText}>Date Selection</h1>
                 <h2>Please select a date:</h2>
                 <Calendar
@@ -54,95 +55,24 @@ const AvailableTimes = ()  =>  {
                     maxDate={latest}
                     activeStartDate={null}
                 />
-
-                <h2>Please choose a party room:</h2>
-                <div className={styles.container}>
-                    {roomTypes.map((room) => (
-                        <button
-                            key={room}
-                            onClick={() => handleSelectedRoom(room)}
-                            className={selectedRoom === room ? styles.buttonSelected : styles.button}
-                        >   
-                            {room}
-                        </button>
-                    ))}
-                </div>
-                {selectedRoom &&(
+                
+                {roomOption.map((room) => (
                     <div>
-                        {selectedRoom === 'Dining' && (
-                            <div>
-                           <h2>Please select a time for the dinning room:</h2>
-                           <div className={styles.container}>
-                               {dtimes.map((time) => (
-                                   <button
-                                       key={time}
-                                       onClick={() => handleSelectTime(time, "dining")}
-                                       className={selectedDTime === time ? styles.buttonSelected : styles.button}
-                                   >
-                                       {time}
-                                   </button>
-                               ))}
-                           </div> 
-                           </div>
-                        )}
-                        {selectedRoom === 'Party' && (
-                            <div>
-                                <h2>Please select a time for the party room:</h2>
-                                 <div className={styles.container}>
-                                    {ptimes.map((time) => (
-                                        <button
-                                            key={time}
-                                            onClick={() => handleSelectTime(time, "party")}
-                                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
-                                        >
-                                            {time}
-                                        </button>
-                    ))}
-                </div>
-                            </div>
-                        )}
-                    </div>
-                )}
-                {/* <h2>Please select a time for the party room:</h2>
-                <div className={styles.container}>
-                    {ptimes.map((time) => (
-                        <button
-                            key={time}
-                            onClick={() => handleSelectTime(time, "party")}
-                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
-                        >
-                            {time}
-                        </button>
-                    ))}
-                </div> */}
-                {/* <form>
-                    <input
-                        type="radio"
-                        id="option1"
-                        value="option1"
-                        checked={selectedValue === 'option1'}
-                        onChange={() => handleRadioChange('option1')}
-                    />
-                    10am
-                    <input
-                        type="radio"
-                        id="option2"
-                        value="option2"
-                        checked={selectedValue === 'option2'}
-                        onChange={() => handleRadioChange('option2')}
-                    />
-                    2pm
-                    <input
-                        type="radio"
-                        id="option3"
-                        value="option3"
-                        checked={selectedValue === 'option3'}
-                        onChange={() => handleRadioChange('option3')}
-                    />
-                    6pm
-                </form> */}
-
-                {/* <h2>Please select a time for the dinning room:</h2>
+                     <button
+                     key={room}
+                     onClick={() => handleSelectedRoom(room)}
+                     className={selectedRoom === room ? GlobalStyles.selectedButton : GlobalStyles.button}
+                   >
+                     {room}
+                   </button>
+                   </div>
+                ))}
+                
+                {selectedRoom && (
+        <div >
+          {selectedRoom === 'Dining Room' && (
+            <div className={GlobalStyles.setup}>
+             <h2>Please select a time for the dinning room:</h2>
                 <div className={styles.container}>
                     {dtimes.map((time) => (
                         <button
@@ -153,25 +83,30 @@ const AvailableTimes = ()  =>  {
                             {time}
                         </button>
                     ))}
-                </div> */}
-                {/* <form>
-                    <input
-                        type="radio"
-                        id="option4"
-                        value="option4"
-                        checked={selectedValue === 'option4'}
-                        onChange={() => handleRadioChange('option4')}
-                    />
-                    10:30am
-                    <input
-                        type="radio"
-                        id="option5"
-                        value="option5"
-                        checked={selectedValue === 'option5'}
-                        onChange={() => handleRadioChange('option5')}
-                    />
-                    2:30pm
-                </form> */}
+                </div>
+            </div>
+          )}
+          
+          {selectedRoom === 'Party Room' && (
+            <div className={GlobalStyles.setup}>
+             <h2>Please select a time for the party room:</h2>
+                <div className={styles.container}>
+                    {ptimes.map((time) => (
+                        <button
+                            key={time}
+                            onClick={() => handleSelectTime(time, "party")}
+                            className={selectedPTime === time ? styles.buttonSelected : styles.button}
+                        >
+                            {time}
+                        </button>
+                    ))}
+                </div>
+            </div>
+          )}
+          </div>
+        )}
+                
+                
                 <button className={GlobalStyles.continueButton}type="button" onClick={() => navigate('/MealDeal')}>Continue</button>
             </div>
         </div>

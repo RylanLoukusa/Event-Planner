@@ -39,7 +39,7 @@ async refreshGenericParty(tabIndex) {
           });
   }
 }
-async goHome(){
+async goToWelcome(){
     window.location.href = "/"
 }
   render(){
@@ -48,7 +48,7 @@ async goHome(){
     //const [key, setKey] = useState('tab2')
     return (
       <div>
-              <button className={GlobalStyles.button}type="button" onClick={() => this.goHome()}>Back</button>
+              <button className={GlobalStyles.button}type="button" onClick={() => this.goToWelcome()}>Back</button>
 
         <Tabs onSelect={(index) => this.refreshGenericParty(index)}>
 
@@ -76,7 +76,7 @@ async goHome(){
                 </p>
             )}
           </TabPanel>
-          <TabPanel>
+          {/* <TabPanel>
         <div className='setup'>
               <h1 className='title-text'>What kind of booking do you require?</h1>
               <div className='selection-view'>
@@ -90,7 +90,7 @@ async goHome(){
                 <FieldTripQuestions/>
               </div>
             </div> 
-          </TabPanel>
+          </TabPanel> */}
         </Tabs>
         
       </div>
