@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import GlobalStyles from '../Global.module.css'
 
 class AdminVerify extends Component{
@@ -29,21 +29,21 @@ async checkAdmin(){
     
     for (var i=0; i < fetchedData.length; i++)
     {
-      if (fetchedData[i].First_name == fname)
+      if (fetchedData[i].First_name === fname)
       {
         hasFName = true;
       }
     }
-    for (var i=0; i < fetchedData.length; i++)
+    for (var j=0; j < fetchedData.length; j++)
     {
-      if (fetchedData[i].Last_name == lname)
+      if (fetchedData[j].Last_name === lname)
       {
         hasLName = true;
       }
     }
-    for (var i=0; i < fetchedData.length; i++)
+    for (var k=0; k < fetchedData.length; k++)
     {
-      if (fetchedData[i].passcode == pass)
+      if (fetchedData[k].passcode === pass)
       {
         hasPasscode = true;
       }
@@ -61,7 +61,7 @@ async checkAdmin(){
 }
 
   render(){
-    const{adVerify}=this.state;
+    //const{adVerify}=this.state;
       return (
         <div className={GlobalStyles.setup}>
           <div className={GlobalStyles.page}>

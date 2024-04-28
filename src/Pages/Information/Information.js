@@ -74,7 +74,7 @@ class Information extends Component{
             this.refreshCustomers();
         })
 
-        window.location.href = "/Home"
+        window.location.href = "/AvailableTimes"
         //this.props.navigate('/Date');
     }
     async goHome(){
@@ -82,7 +82,7 @@ class Information extends Component{
     }
 
     render(){
-        const{customers}=this.state;
+        //const{customers}=this.state;
         //let navigate = useNavigate();
         return (
             <div className={GlobalStyles.setup}>
