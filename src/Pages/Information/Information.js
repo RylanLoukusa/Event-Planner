@@ -109,7 +109,7 @@ class Information extends Component{
                         <label className={GlobalStyles.inputPrompt}>Username</label>
                         <input required placeholder="Enter" id="username" className={GlobalStyles.input}/>
                         <label className={GlobalStyles.inputPrompt}>Password</label>
-                        <input required placeholder="Enter" id="password" className={GlobalStyles.input}/>
+                        <input required placeholder="Enter" id="password" type="password" className={GlobalStyles.input}/>
                     <button className={GlobalStyles.continueButton} onClick={() => this.addCustomer()}>Continue</button>
                 </div>
             </div>   

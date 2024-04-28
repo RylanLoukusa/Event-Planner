@@ -23,7 +23,7 @@ const Login = () => {
         </fieldset>  
         <fieldset className="Fieldset">
             <label className={GlobalStyles.inputPrompt}> Password: </label>
-            <input required placeholder='Enter' className={GlobalStyles.input}/> 
+            <input required placeholder='Enter' type="password" className={GlobalStyles.input}/> 
         </fieldset>
         <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
           <Dialog.Close asChild>
