@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Component } from 'react';
+//import { Component } from 'react';
 import GlobalStyles from "../Global.module.css";
 import ThirdFloorQuestions from '../Admin/ThirdFloorQuestions';
 import FieldTripQuestions from '../Admin/FieldTripQuestions';

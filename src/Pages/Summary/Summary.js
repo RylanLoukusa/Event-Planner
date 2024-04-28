@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import GlobalStyles from '../Global.module.css';
 import styles from './Summary.module.css';
 

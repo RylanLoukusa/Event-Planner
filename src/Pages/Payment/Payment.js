@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import Checkout from './Checkout/Checkout';
 
 import styles from "./Payment.module.css";

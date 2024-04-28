@@ -1,5 +1,5 @@
-import QuestionnaireTextField from '../../Components/QuestionnaireTextField.jsx';
-import { useNavigate } from 'react-router-dom';
+// import QuestionnaireTextField from '../../Components/QuestionnaireTextField.jsx';
+// import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import { React } from 'react';
 import { Component } from 'react';
@@ -62,7 +62,6 @@ async addQuestionnaireAnswers(){
     AnyQuestions
     ];
 
-    let i = 0;
     const data=new FormData();
     data.append("customerID", 2);
     /*

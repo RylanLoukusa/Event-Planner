@@ -48,7 +48,7 @@ const AvailableTimes = ()  =>  {
                 <h1 className={GlobalStyles.titleText}>Date Selection</h1>
                 <h2>Please select a date:</h2>
                 <Calendar
-                    selectRange={true}
+                    selectRange={false}
                     onChange={onChange}
                     value={value}
                     minDate={earliest}
