@@ -128,7 +128,7 @@ async goHome(){
           <button className={GlobalStyles.button} onClick={() => this.addQuestionnaireAnswers()} type='submit'>
             View booking summary
           </button>
-          <p>Booking TIME on DATE</p>
+          {/* <p>Booking TIME on DATE</p> */}
         </div>
         <button className={GlobalStyles.specialButton} onClick={() => this.goHome()}>
           Change or Cancel
