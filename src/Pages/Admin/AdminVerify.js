@@ -18,50 +18,49 @@ class AdminVerify extends Component{
 //5038 is other url
 API_URL="http://localhost:5092/";
 
-async checkAdmin(){
-    var fname= ((document.getElementById("fname")||{}).value)||"";
-    var lname= ((document.getElementById("lname")||{}).value)||"";
+  async checkAdmin(){
+
+    var user= ((document.getElementById("username")||{}).value)||"";
     var pass= ((document.getElementById("passcode")||{}).value)||"";
-
-    var hasFName = false;
-    var hasLName = false;
+  
+    var hasUsername = false;
     var hasPasscode = false;
-
-    const response = await fetch(this.API_URL+"api/Web/GetAdmin");
+    var hasAdmin = false;
+  
+    const response = await fetch(this.API_URL+"api/Web/GetCustomer");
     const fetchedData = await response.json();
     
     for (var i=0; i < fetchedData.length; i++)
     {
-      if (fetchedData[i].First_name === fname)
+      if (fetchedData[i].username === user)
       {
-        hasFName = true;
-      }
-    }
-    for (var j=0; j < fetchedData.length; j++)
-    {
-      if (fetchedData[j].Last_name === lname)
-      {
-        hasLName = true;
-      }
-    }
-    for (var k=0; k < fetchedData.length; k++)
-    {
-      if (fetchedData[k].passcode === pass)
-      {
-        hasPasscode = true;
+        hasUsername = true;
+        if (fetchedData[i].passcode === pass)
+        {
+          hasPasscode = true;
+          if (fetchedData[i].isAdmin)
+          {
+            hasAdmin = true;
+          }
+        }
       }
     }
 
-    if (!hasFName || !hasLName || !hasPasscode)
+    if (!hasUsername || !hasPasscode)
     {
-      alert("First name, last name, or password does not match");
+      alert("Username or password does not match");
+      return;
+    }
+    if (!hasAdmin)
+    {
+      alert("User is not an admin");
       return;
     }
 
     window.location.href = "/AdminView";
     return;
     //this.props.navigate('/Date');
-}
+  };
 
   render(){
     //const{adVerify}=this.state;
@@ -80,11 +79,8 @@ async checkAdmin(){
           <div className={GlobalStyles.page}>
             
 
-            <label className={GlobalStyles.inputPrompt}>First Name</label>
-            <input required className={GlobalStyles.input} id="fname" placeholder="First Name"  />
-
-            <label className={GlobalStyles.inputPrompt}>Last Name</label>
-            <input required className={GlobalStyles.input} id="lname" placeholder="Last Name"  />
+            <label className={GlobalStyles.inputPrompt}>Username</label>
+            <input required className={GlobalStyles.input} id="username" placeholder="First Name"  />
 
             <label className={GlobalStyles.inputPrompt}>Passcode</label>
             <input required className={GlobalStyles.input} id="passcode" placeholder="Passcode" type="password"  />
