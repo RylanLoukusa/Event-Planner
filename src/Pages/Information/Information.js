@@ -82,14 +82,11 @@ class Information extends Component{
     }
 
     render(){
-        //const{customers}=this.state;
-        //let navigate = useNavigate();
         return (
             <div className={GlobalStyles.setup}>
                 <div className={GlobalStyles.page}>
                     <button className={GlobalStyles.backButton} type="button" onClick={() => this.goHome()}>Back</button>
-                    <h1 className={GlobalStyles.titleText}>YOUR INFORMATION</h1><br />
-
+                    <h1 className={GlobalStyles.titleText}>Please Enter Your Contact Info</h1><br />
                     <label className={GlobalStyles.inputPrompt}>First Name</label>
                         <input required placeholder="Enter" id="fname" className={GlobalStyles.input}/>
                         <label className={GlobalStyles.inputPrompt}>Last Name</label>
