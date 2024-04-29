@@ -7,7 +7,7 @@ import './Dialog.css';
 
 const AuditoriumQuestions = () => {
   const [selectedmovieOption, setSelectedMovieOption] = useState(null);
-  const [setCustomers] = useState([]);
+  //const [setCustomers] = useState([]);
   //const [customers, setCustomers] = useState([]);
 
 
@@ -23,19 +23,19 @@ const AuditoriumQuestions = () => {
     }
   };
 
-  useEffect(() => {
-    refreshCustomers();
-  }, []);
+  // useEffect(() => {
+  //   refreshCustomers();
+  // }, []);
 
-  const API_URL = "http://localhost:5092/";
+  //const API_URL = "http://localhost:5092/";
 
-  const refreshCustomers = async () => {
-    fetch(API_URL + "api/Web/GetCustomer")
-      .then(response => response.json())
-      .then(data => {
-        setCustomers(data);
-      });
-  };
+  // const refreshCustomers = async () => {
+  //   fetch(API_URL + "api/Web/GetCustomer")
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setCustomers(data);
+  //     });
+  // };
 
   // const addHost = async () => {
   //   // Whatever API connection needs to happen goes here

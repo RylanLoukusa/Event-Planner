@@ -53,6 +53,13 @@ async addQuestionnaireAnswers(){
         return 0;
     }
     */
+
+    if (WhatIsName === "" || HowOld  === "" || HowManyChildren === "" || HowManyAdults === "" || WhatMovie === "" || WhatSeat === "")
+    {
+      alert("Please fill out the questions");
+      return;
+    }
+
     const responses = [WhatIsName,
     HowOld,
     HowManyChildren,

@@ -9,7 +9,9 @@ import styles from './AvailableTimes.module.css';
 const AvailableTimes = ()  =>  {
     let navigate = useNavigate();
     const [value, onChange] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState(null);
     const numWeeks = 2;
+    const curDate = new Date();
     const earliest = new Date();
     const latest = new Date();
     earliest.setDate(earliest.getDate() + numWeeks * 7);
@@ -41,6 +43,17 @@ const AvailableTimes = ()  =>  {
         console.log(time);
     };
 
+    // const API_URL = "http://localhost:5092/";
+  
+    // const addHost = async () => {
+    //   // Whatever API connection needs to happen goes here
+    // };
+
+    const handleSelectDate = (date) => {
+        setSelectedDate(date); // Update the selected date state
+        alert(`Selected Date: ${date.toLocaleDateString()}`); // Alert the selected date
+    };
+
     return (
         <div className={GlobalStyles.setup}>
             <div className={GlobalStyles.page}>
@@ -49,7 +62,11 @@ const AvailableTimes = ()  =>  {
                 <h2>Please select a date:</h2>
                 <Calendar
                     selectRange={false}
-                    onChange={onChange}
+                    onChange={(date) => {
+                        onChange(date);
+                        setSelectedDate(date);
+                        handleSelectDate(date);
+                    }}
                     value={value}
                     minDate={earliest}
                     maxDate={latest}
