@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import styles from './MealDeal.module.css';  // Ensure the path is correct based on your project structure
 
+let finalDeal = '';
+
 const MealDeal = () => {
   const [selectedMealDeal, setSelectedMealDeal] = useState(null);
   const [details, setDetails] = useState({
@@ -12,6 +14,7 @@ const MealDeal = () => {
     'Hot Dogs With Fries': 0,
     'Chicken Strips With Fries': 0
   });
+
 const handleChange = (field, value) => {
     setDetails(prev => ({ ...prev, [field]: value }));
   };
@@ -23,9 +26,8 @@ const handleChange = (field, value) => {
     } else {
       setSelectedMealDeal(deal);
     }
+    finalDeal = deal;
   };
-
-  
 
   return (
     <div className={styles.container}>
@@ -85,4 +87,7 @@ const handleChange = (field, value) => {
   );
 };
 
+export function addMealDeal(){
+  alert(finalDeal);
+}
 export default MealDeal;

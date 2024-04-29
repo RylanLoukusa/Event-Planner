@@ -11,7 +11,9 @@ const AvailableTimes = ()  =>  {
     const [value, onChange] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(null);
     const numWeeks = 2;
-    const curDate = new Date();
+    const curFullDate = new Date();
+    let curDate = "";
+    let curTime = "";
     const earliest = new Date();
     const latest = new Date();
     earliest.setDate(earliest.getDate() + numWeeks * 7);
@@ -37,10 +39,14 @@ const AvailableTimes = ()  =>  {
         if (type === "party") {
             setSelectedPTime(time === selectedPTime ? null : time);
         }
-        else {
+        else if (type === "dining"){
             setSelectedDTime(time === selectedDTime ? null : time);
         }
+        else{
+            alert("Please select a vaild party type")
+        }
         console.log(time);
+        alert(time);
     };
 
     // const API_URL = "http://localhost:5092/";
@@ -52,6 +58,48 @@ const AvailableTimes = ()  =>  {
     const handleSelectDate = (date) => {
         setSelectedDate(date); // Update the selected date state
         alert(`Selected Date: ${date.toLocaleDateString()}`); // Alert the selected date
+        curDate = date.toLocaleDateString();
+    };
+
+    // DateTime dT = new DateTime(date);
+    // alert(dt);
+    const confirm = () => {
+        if (!selectedDate) {
+            alert("Please select a date");
+            return;
+        }
+    
+        let dateTime = selectedDate.toLocaleDateString(); // Get the selected date in string format
+
+        if (selectedRoom === '' || selectedRoom === null) {
+            alert("Please select a room type");
+            return;
+        }
+
+        if (selectedRoom === 'Dining Room' && !selectedDTime) {
+            alert("Please select a time for the dining room");
+            return;
+        }
+    
+        if (selectedRoom === 'Party Room' && !selectedPTime) {
+            alert("Please select a time for the party room");
+            return;
+        }
+    
+        let selectedTime = selectedRoom === 'Dining Room' ? selectedDTime : selectedPTime; // Get the selected time
+        dateTime += ` ${selectedTime}`; // Append the selected time to the date string
+        
+        alert(`Selected Date and Time: ${dateTime}`);
+        //2095-07-23T12:42:06 is the date time format
+        //however it is saving it as 5/24/2024 2:30pm format instead
+
+
+        //push that to the API
+
+
+        //Go to the next webpage
+
+        
     };
 
     return (
@@ -123,8 +171,8 @@ const AvailableTimes = ()  =>  {
           </div>
         )}
                 
-                
-                <button className={GlobalStyles.continueButton}type="button" onClick={() => navigate('/MealDeal')}>Continue</button>
+                {/* navigate('/MealDeal') */}
+                <button className={GlobalStyles.continueButton}type="button" onClick={() => confirm()}>Continue</button>
             </div>
         </div>
     );

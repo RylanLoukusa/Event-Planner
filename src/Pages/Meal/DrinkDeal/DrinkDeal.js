@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './DrinkDeal.module.css';  // Ensure the path matches your project structure
 
+let finalDrink = [];
+
 const DrinkDeal = () => {
   const [selectedDrinks, setSelectedDrinks] = useState([]);
 
@@ -9,9 +11,11 @@ const DrinkDeal = () => {
   const handleSelectDrink = (drink) => {
     if (selectedDrinks.includes(drink)) {
       setSelectedDrinks(selectedDrinks.filter(d => d !== drink));
+      finalDrink.pop();
     } else {
       if (selectedDrinks.length < 2) {
         setSelectedDrinks([...selectedDrinks, drink]);
+        finalDrink.push(drink);
       } else {
         alert("You can only select up to two drinks.");
       }
@@ -38,5 +42,9 @@ const DrinkDeal = () => {
   );
 };
 
+export function addDrinkDeal(){
+  alert(finalDrink[0]);
+  alert(finalDrink[1]);
+}
 export default DrinkDeal;
 

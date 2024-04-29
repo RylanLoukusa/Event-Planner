@@ -7,9 +7,10 @@ import './Dialog.css';
 
 const AuditoriumQuestions = () => {
   const [selectedmovieOption, setSelectedMovieOption] = useState(null);
+  const [selectedSeatingOption, setSelectedSeatingOption] = useState(null);
+  const [selectedFormatOption, setSelectedFormatOption] = useState(null);
   //const [setCustomers] = useState([]);
   //const [customers, setCustomers] = useState([]);
-
 
   const movieOptions = ['Movie playing in the Theater', 'Bringing personal movie'];
   const seatingOptions = [{ label: 'Front two Rows' }, { label: 'Middle of the Auditorium' }, { label: 'Back two rows' }];
@@ -21,6 +22,17 @@ const AuditoriumQuestions = () => {
     } else {
       setSelectedMovieOption(movie);
     }
+    alert(movie);
+  };
+
+  const handleSeatingSelect = (selectedOption) => {
+    setSelectedSeatingOption(selectedOption);
+    alert(selectedOption.label);
+  };
+
+  const handleFormatSelect = (selectedOption) => {
+    setSelectedFormatOption(selectedOption);
+    alert(selectedOption.label);
   };
 
   // useEffect(() => {
@@ -74,7 +86,7 @@ const AuditoriumQuestions = () => {
                     <input placeholder='Enter' className={GlobalStyles.input} />
                     <br />
                     <label className={GlobalStyles.headerText}>Seating preference:</label>
-                    <Select options={seatingOptions} />
+                    <Select options={seatingOptions} onChange={handleSeatingSelect} />
                   </div>
                 )}
 
@@ -84,9 +96,9 @@ const AuditoriumQuestions = () => {
                     <input placeholder='Enter' className={GlobalStyles.input} />
                     <br />
                     <label className={GlobalStyles.headerText}>Format of the movie:</label>
-                    <Select options={formatOptions} />
+                    <Select options={formatOptions} onChange={handleFormatSelect} />
                     <label className={GlobalStyles.headerText}>Seating preference:</label>
-                    <Select options={seatingOptions} />
+                    <Select options={seatingOptions} onChange={handleSeatingSelect} />
                   </div>
                 )}
               </div>
