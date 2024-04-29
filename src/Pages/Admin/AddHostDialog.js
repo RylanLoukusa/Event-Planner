@@ -7,10 +7,10 @@ import GlobalStyles from '../Global.module.css'
 
 class AddHost extends Component{
     constructor(props){
-        super(props);
-        this.state={
+      super(props);
+      this.state={
         customers:[]
-        }
+      }
     }
 
     //5038 is other url
@@ -70,7 +70,7 @@ class AddHost extends Component{
     }
 
     render(){
-      const{customers}=this.state;
+      //const{customers}=this.state;
       //let navigate = useNavigate();
       return (
         <Dialog.Root>
