@@ -99,7 +99,7 @@ const AvailableTimes = ()  =>  {
 
         //Go to the next webpage
 
-        
+        window.location.href = "/MealDeal";
     };
 
     return (

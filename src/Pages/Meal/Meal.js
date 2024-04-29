@@ -31,7 +31,7 @@ const MealDealSelectionPage = () => {
 
 
     //Go to the next webpage
-
+    window.location.href = "/Questionaire";
     
   };
 

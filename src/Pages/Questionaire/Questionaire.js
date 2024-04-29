@@ -23,16 +23,6 @@ class Questionaire extends Component{
 //5038 is other url
 API_URL="http://localhost:5092/";
 
-componentDidMount(){
-    this.refreshCustomers();
-}
-
-async refreshCustomers(){
-    fetch(this.API_URL+"api/Web/GetCustomer").then(response=>response.json())
-    .then(data=>{
-    this.setState({customers:data});
-    })
-}
 
 async addQuestionnaireAnswers(){
     var WhatIsName= ((document.getElementById("WhatIsName")||{}).value)||"";
