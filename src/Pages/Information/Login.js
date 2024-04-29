@@ -27,7 +27,7 @@ const Login = () => {
         </fieldset>
         <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
           <Dialog.Close asChild>
-            <button onClick={() => navigate('/Home')}className={GlobalStyles.specialButton} type='submit'>Save changes</button>
+            <button onClick={() => navigate('/Home')}className={GlobalStyles.continueButton} type='submit'>Save Changes</button>
           </Dialog.Close>
         </div>
         <Dialog.Close asChild>

@@ -109,7 +109,7 @@ async goHome(){
             </fieldset>
             <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
               <Dialog.Close asChild>
-                <button className="Button green" onClick={() => this.addQuestionnaireAnswers()}>Save changes</button>
+                <button className={GlobalStyles.continueButton} onClick={() => this.addQuestionnaireAnswers()}>Save Changes</button>
               </Dialog.Close>
             </div>
             <Dialog.Close asChild>
