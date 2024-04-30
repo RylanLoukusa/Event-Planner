@@ -26,10 +26,7 @@ const MealDealSelectionPage = () => {
   const confirm = () => {    
     addMealDeal();  
     addDrinkDeal();
-
     //push that to the API
-
-
     //Go to the next webpage
     window.location.href = "/Questionaire";
     

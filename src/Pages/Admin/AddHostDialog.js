@@ -104,7 +104,7 @@ class AddHost extends Component{
               </fieldset>
               <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
                 <Dialog.Close asChild>
-                  <button onClick={() => this.addHost()} className="Button green">Save changes</button>
+                  <button onClick={() => this.addHost()} className={GlobalStyles.continueButton}>Save Changes</button>
                 </Dialog.Close>
               </div>
               <Dialog.Close asChild>

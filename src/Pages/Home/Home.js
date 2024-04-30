@@ -11,6 +11,7 @@ const Home = () =>  {
   return (
     <div className={GlobalStyles.setup}>
       <div className={GlobalStyles.page}>
+        <button className={GlobalStyles.backButton} onClick={() => navigate('/')}> Back </button>
         <div style={{ overflow: 'scroll' }}>
           <h1 className={GlobalStyles.titleText}>Rooms Available for Booking</h1> {/* Use <h1> instead of <title> for in-document titles */}
           <div className={GlobalStyles.selectionView}>

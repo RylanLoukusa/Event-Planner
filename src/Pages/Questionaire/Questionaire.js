@@ -99,6 +99,7 @@ async goHome(){
     return (
       <div className={GlobalStyles.setup}>
         <div className={GlobalStyles.page}>
+        <button className={GlobalStyles.backButton} onClick={() => this.goHome()}> Back </button>
           <h1 className={GlobalStyles.titleText}>Questionnaire</h1>
           <label className={GlobalStyles.inputPrompt}>What is your birthday child's name? </label>
           <input id="WhatIsName" required placeholder='Enter' className={GlobalStyles.input}/>
@@ -120,9 +121,6 @@ async goHome(){
           </button>
           {/* <p>Booking TIME on DATE</p> */}
         </div>
-        <button className={GlobalStyles.specialButton} onClick={() => this.goHome()}>
-          Change or Cancel
-        </button>
       </div>
     );
   }

@@ -72,7 +72,7 @@ const AuditoriumQuestions = () => {
                 <button
                   key={movie}
                   onClick={() => handleMovieSelect(movie)}
-                  className={selectedmovieOption === movie ? GlobalStyles.selectedButton : GlobalStyles.button}
+                  className={selectedmovieOption === movie ? GlobalStyles.selectedButton : GlobalStyles.selectableButton}
                 >
                   {movie}
                 </button>
@@ -105,7 +105,7 @@ const AuditoriumQuestions = () => {
             )}
             <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
               <Dialog.Close asChild>
-                <button className="Button">Save changes</button>
+                <button className={GlobalStyles.continueButton}>Save changes</button>
               </Dialog.Close>
             </div>
           </div>

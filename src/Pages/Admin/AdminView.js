@@ -2,9 +2,9 @@ import React from 'react';
 import AddHost from './AddHostDialog';
 import { Component } from 'react';
 import {Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-// import ThirdFloorQuestions from './ThirdFloorQuestions';
-// import FieldTripQuestions from './FieldTripQuestions';
-// import AuditoriumQuestions from './AuditoriumQuestions';
+import ThirdFloorQuestions from './ThirdFloorQuestions';
+import FieldTripQuestions from './FieldTripQuestions';
+import AuditoriumQuestions from './AuditoriumQuestions';
 // import { useNavigate } from 'react-router-dom';
 import GlobalStyles from '../Global.module.css';
 import './AdminView.css'
@@ -48,14 +48,12 @@ async goToWelcome(){
     //const [key, setKey] = useState('tab2')
     return (
       <div>
-              <button className={GlobalStyles.button}type="button" onClick={() => this.goToWelcome()}>Back</button>
-
+        <button className={GlobalStyles.backButton}type="button" onClick={() => this.goToWelcome()}>Back</button>
         <Tabs onSelect={(index) => this.refreshGenericParty(index)}>
-
           <TabList >
             <Tab eventKey="tab1">Upcoming Events</Tab>
             <Tab eventKey="tab2">Past Events</Tab>
-            <Tab eventKey="tab3">Add a special booking</Tab>
+            <Tab eventKey="tab3">Add a Special Booking</Tab>
           </TabList>
           <TabPanel>
             <h2>Upcoming Events</h2>
@@ -76,7 +74,7 @@ async goToWelcome(){
                 </p>
             )}
           </TabPanel>
-          {/* <TabPanel>
+          <TabPanel>
         <div className='setup'>
               <h1 className='title-text'>What kind of booking do you require?</h1>
               <div className='selection-view'>
@@ -90,7 +88,7 @@ async goToWelcome(){
                 <FieldTripQuestions/>
               </div>
             </div> 
-          </TabPanel> */}
+          </TabPanel>
         </Tabs>
         
       </div>
